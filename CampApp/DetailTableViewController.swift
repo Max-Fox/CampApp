@@ -18,6 +18,9 @@ class DetailTableViewController: UITableViewController {
     var textLabel: String = ""
     
     var favoriteFood: [FavoriteFood] = []
+    var doneStep: [Bool] = []
+    
+    
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +35,11 @@ class DetailTableViewController: UITableViewController {
 //            print(error.localizedDescription)
 //        }
         getFavoriteFood(array: &favoriteFood)
+        
+        //Заполняем массив выполнения шагов false
+        for _ in 0..<steps.count {
+           doneStep.append(false)
+        }
         
         
         var check = 0
@@ -70,7 +78,17 @@ class DetailTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        //Красим цвет текста, в зависимости от выполнения
+        if doneStep[indexPath.row] == true {
+            cell.textLabel?.textColor = .green
+        } else {
+            cell.textLabel?.textColor = .black
+        }
+        
         cell.textLabel?.text = "Шаг \(steps[indexPath.row].numStep ?? 0): \(steps[indexPath.row].aboutStep ?? "Конец")"
+        
+        
         // Configure the cell...
       
         return cell
@@ -79,8 +97,10 @@ class DetailTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(tableView.cellForRow(at: indexPath)?.textLabel?.textColor == .black){
             tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .green
+            doneStep[indexPath.row] = true
         } else {
             tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .black
+            doneStep[indexPath.row] = false
         }
     }
     
@@ -107,24 +127,30 @@ class DetailTableViewController: UITableViewController {
         favoriteIcon.setImage(UIImage(named: "favorite"), for: .normal)
         self.saveFood(foodName: textLabel)
         } else {
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            context.delete(favoriteFood[indexFood])
-            do {
-                try context.save()
-                //print("DELETE")
-            } catch let error as NSError {
-                print(error.userInfo)
-            }
+            deleteFood(indexFood: indexFood)
             favoriteIcon.setImage(UIImage(named: "notfavorite"), for: .normal)
         }
         
         
     }
+    
+    func deleteFood(indexFood: Int) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        context.delete(favoriteFood[indexFood])
+        do {
+            try context.save()
+            //print("DELETE")
+        } catch let error as NSError {
+            print(error.userInfo)
+        }
+    }
+    
     func saveFood(foodName: String){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "FavoriteFood", in: context)
-        let foodObject = NSManagedObject(entity: entity!, insertInto: context) as! FavoriteFood
+//        let entity = NSEntityDescription.entity(forEntityName: "FavoriteFood", in: context)
+//        let foodObject = NSManagedObject(entity: entity!, insertInto: context) as! FavoriteFood
+        let foodObject = FavoriteFood(context: context)
         foodObject.foodName = foodName
         do {
             try context.save()
