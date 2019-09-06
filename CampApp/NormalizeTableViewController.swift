@@ -13,6 +13,7 @@ class NormalizeTableViewController: UITableViewController {
     @IBOutlet weak var countPersonButtonItem: UIBarButtonItem!
     @IBOutlet weak var stepperNormalize: UIStepper!
     
+    @IBOutlet weak var headerTable: UILabel!
     private var normalizeFood: [NormalizeFood] = []
     private var filteredNormalizeFood = [NormalizeFood]()
     private let searchController = UISearchController(searchResultsController: nil)
@@ -44,6 +45,8 @@ class NormalizeTableViewController: UITableViewController {
         definesPresentationContext = true
         
         tabBarController?.selectedIndex = 1
+        
+        headerTable.adjustsFontSizeToFitWidth = true
     }
 
     // MARK: - Table view data source
@@ -80,12 +83,15 @@ class NormalizeTableViewController: UITableViewController {
         }
         // Configure the cell...
         cell.TitleNormalizeLabel?.text = food.name
+        cell.TitleNormalizeLabel.adjustsFontSizeToFitWidth = true
         
         if(food.sizeInSummer != "") {
             cell.sizeInSummerLabel.text = "\(Int(food.sizeInSummer!)! * Int(stepperNormalize.value))"
         } else {
             cell.sizeInSummerLabel.text = food.sizeInSummer
         }
+        
+        cell.sizeInSummerLabel.adjustsFontSizeToFitWidth = true
        
         if(food.sizeInWinter != "") {
             cell.sizeInWinterLabel.text = "\(Int(food.sizeInWinter!)! * Int(stepperNormalize.value))"
