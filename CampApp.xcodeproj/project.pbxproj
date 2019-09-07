@@ -53,6 +53,8 @@
 		3F8F4E9E232306690020DF80 /* kabachok.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E9D232306680020DF80 /* kabachok.jpg */; };
 		3F8F4EA0232307340020DF80 /* ramenWithCheeze.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E9F232307340020DF80 /* ramenWithCheeze.jpg */; };
 		3F8F4EA2232320C00020DF80 /* soupWithGrib.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4EA1232320C00020DF80 /* soupWithGrib.jpg */; };
+		3F8F4EA423243FB30020DF80 /* saveInCamp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4EA323243FB20020DF80 /* saveInCamp.jpg */; };
+		3F8F4EA62324412C0020DF80 /* fire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4EA52324412C0020DF80 /* fire.jpg */; };
 		3FBBC210229180EB001898D1 /* star-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBBC20F229180EB001898D1 /* star-7.png */; };
 		3FBBC212229320EF001898D1 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBBC211229320EF001898D1 /* FavoritesTableViewController.swift */; };
 		3FBBC2142294A14E001898D1 /* ShowAllFoodCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBBC2132294A14E001898D1 /* ShowAllFoodCollectionViewController.swift */; };
@@ -108,6 +110,8 @@
 		3F8F4E9D232306680020DF80 /* kabachok.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kabachok.jpg; sourceTree = "<group>"; };
 		3F8F4E9F232307340020DF80 /* ramenWithCheeze.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ramenWithCheeze.jpg; sourceTree = "<group>"; };
 		3F8F4EA1232320C00020DF80 /* soupWithGrib.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soupWithGrib.jpg; sourceTree = "<group>"; };
+		3F8F4EA323243FB20020DF80 /* saveInCamp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = saveInCamp.jpg; path = ../saveInCamp.jpg; sourceTree = "<group>"; };
+		3F8F4EA52324412C0020DF80 /* fire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fire.jpg; path = CampApp/fire.jpg; sourceTree = SOURCE_ROOT; };
 		3FBBC20F229180EB001898D1 /* star-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star-7.png"; path = "Assets.xcassets/star-7.png"; sourceTree = "<group>"; };
 		3FBBC211229320EF001898D1 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		3FBBC2132294A14E001898D1 /* ShowAllFoodCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllFoodCollectionViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 		3F6E864422B1BA7300ECF71A /* adviceImage */ = {
 			isa = PBXGroup;
 			children = (
+				3F8F4EA52324412C0020DF80 /* fire.jpg */,
+				3F8F4EA323243FB20020DF80 /* saveInCamp.jpg */,
 				3F6E864522B1BC0E00ECF71A /* advicePalatka.jpg */,
 				3F6E864222B1BA5B00ECF71A /* adviceFoot.jpg */,
 			);
@@ -313,6 +319,7 @@
 				3F8F4EA0232307340020DF80 /* ramenWithCheeze.jpg in Resources */,
 				3F8F4E892322E82E0020DF80 /* cremSoup.jpg in Resources */,
 				3F7B385C228B3DCE00FEA274 /* LaunchScreen.storyboard in Resources */,
+				3F8F4EA423243FB30020DF80 /* saveInCamp.jpg in Resources */,
 				3F6E863922B0FD3900ECF71A /* advice.json in Resources */,
 				3F7B38832290D0B400FEA274 /* жульен.jpg in Resources */,
 				3F8F4E902322EFC70020DF80 /* grechaWithOvoshi.jpg in Resources */,
@@ -325,6 +332,7 @@
 				3F6E865122B2D6CF00ECF71A /* glintvein.jpg in Resources */,
 				3F8F4E8C2322E82E0020DF80 /* uxa.jpg in Resources */,
 				3F6EBC1522A27CDA00FFB30C /* data.plist in Resources */,
+				3F8F4EA62324412C0020DF80 /* fire.jpg in Resources */,
 				3F7B3854228B3DCC00FEA274 /* Main.storyboard in Resources */,
 				3F6E864322B1BA5B00ECF71A /* adviceFoot.jpg in Resources */,
 				3F7B3877228E054800FEA274 /* test.json in Resources */,

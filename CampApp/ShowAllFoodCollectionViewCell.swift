@@ -14,11 +14,11 @@ class ShowAllFoodCollectionViewCell: UICollectionViewCell {
     
  
     override func layoutSubviews() {
-        self.layer.cornerRadius = 10
-        self.layer.shadowOpacity = 0.3
-        self.layer.shadowRadius = 9
-        self.layer.shadowOffset = CGSize(width: 5, height: 8)
-        image.layer.cornerRadius = 10
+        self.layer.cornerRadius = 5
+        self.layer.shadowOpacity = 0.2
+        self.layer.shadowRadius = 1
+        self.layer.shadowOffset = CGSize(width: 3, height: 5)
+        image.layer.cornerRadius = 5
         self.clipsToBounds = false
     }
     

@@ -81,7 +81,7 @@
                                                 </connections>
                                             </collectionView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIC-Bg-k86">
-                                                <rect key="frame" x="213" y="339" width="193" height="26"/>
+                                                <rect key="frame" x="213" y="324" width="193" height="26"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                                 <state key="normal" title="Посмотреть все &gt;"/>
                                                 <connections>
@@ -89,7 +89,7 @@
                                                 </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Iw6-Fs-eBF">
-                                                <rect key="frame" x="20" y="373" width="382" height="220"/>
+                                                <rect key="frame" x="20" y="358" width="382" height="220"/>
                                                 <color key="backgroundColor" red="0.13800868390000001" green="0.91871994729999995" blue="0.050046466290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="220" id="0zK-oA-30M"/>
@@ -158,7 +158,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вторые блюда" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUt-Tz-oVD">
-                                                <rect key="frame" x="20" y="340" width="161" height="24"/>
+                                                <rect key="frame" x="20" y="325" width="161" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="161" id="msE-Go-Lej"/>
                                                 </constraints>
@@ -167,7 +167,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="juq-qc-119">
-                                                <rect key="frame" x="20" y="696" width="382" height="320"/>
+                                                <rect key="frame" x="20" y="660" width="382" height="320"/>
                                                 <color key="backgroundColor" red="0.13800868391990662" green="0.91871994733810425" blue="0.050046466290950775" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="320" id="HTf-Uc-4jh"/>
@@ -222,7 +222,7 @@
                                                 </connections>
                                             </collectionView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2u4-8b-h5v">
-                                                <rect key="frame" x="115" y="979" width="192" height="37"/>
+                                                <rect key="frame" x="115" y="950" width="192" height="37"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="192" id="og7-qn-d9k"/>
                                                 </constraints>
@@ -233,7 +233,7 @@
                                                 </connections>
                                             </pageControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Напитки" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkf-jz-kxY">
-                                                <rect key="frame" x="20" y="664" width="193" height="24"/>
+                                                <rect key="frame" x="20" y="625" width="193" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="193" id="KUu-wW-jRT"/>
                                                 </constraints>
@@ -248,7 +248,7 @@
                                             <constraint firstAttribute="trailing" secondItem="lps-q4-Tmf" secondAttribute="trailing" constant="8" id="5cf-5U-qad"/>
                                             <constraint firstItem="s0r-N4-v2P" firstAttribute="top" secondItem="4ks-zT-AaV" secondAttribute="bottom" constant="10" id="6US-Ek-bQe"/>
                                             <constraint firstAttribute="trailing" secondItem="bkf-jz-kxY" secondAttribute="trailing" constant="201" id="7ro-ZY-tgu"/>
-                                            <constraint firstItem="juq-qc-119" firstAttribute="top" secondItem="D0P-Dp-ZLw" secondAttribute="top" constant="696" id="8sK-x7-s0Z"/>
+                                            <constraint firstItem="juq-qc-119" firstAttribute="top" secondItem="D0P-Dp-ZLw" secondAttribute="top" constant="660" id="8sK-x7-s0Z"/>
                                             <constraint firstItem="bkf-jz-kxY" firstAttribute="leading" secondItem="D0P-Dp-ZLw" secondAttribute="leading" constant="20" id="94X-rj-RYz"/>
                                             <constraint firstItem="zUt-Tz-oVD" firstAttribute="leading" secondItem="D0P-Dp-ZLw" secondAttribute="leading" constant="20" id="Brb-8b-bvh"/>
                                             <constraint firstAttribute="trailing" secondItem="2u4-8b-h5v" secondAttribute="trailing" constant="107" id="EuI-rc-j9H"/>
@@ -262,8 +262,8 @@
                                             <constraint firstItem="juq-qc-119" firstAttribute="leading" secondItem="D0P-Dp-ZLw" secondAttribute="leading" constant="20" id="Yjb-kK-ldD"/>
                                             <constraint firstItem="s0r-N4-v2P" firstAttribute="leading" secondItem="Iw6-Fs-eBF" secondAttribute="leading" id="bjz-g7-MbA"/>
                                             <constraint firstItem="lps-q4-Tmf" firstAttribute="top" secondItem="D0P-Dp-ZLw" secondAttribute="top" constant="20" id="gaO-Md-yM0"/>
-                                            <constraint firstItem="2u4-8b-h5v" firstAttribute="top" secondItem="D0P-Dp-ZLw" secondAttribute="top" constant="979" id="hgL-vx-aZu"/>
-                                            <constraint firstItem="FIC-Bg-k86" firstAttribute="top" secondItem="s0r-N4-v2P" secondAttribute="bottom" constant="65" id="iyo-KU-zvi"/>
+                                            <constraint firstItem="2u4-8b-h5v" firstAttribute="top" secondItem="D0P-Dp-ZLw" secondAttribute="top" constant="950" id="hgL-vx-aZu"/>
+                                            <constraint firstItem="FIC-Bg-k86" firstAttribute="top" secondItem="s0r-N4-v2P" secondAttribute="bottom" constant="50" id="iyo-KU-zvi"/>
                                             <constraint firstItem="FIC-Bg-k86" firstAttribute="leading" secondItem="zUt-Tz-oVD" secondAttribute="trailing" constant="32" id="jWd-ej-kdb"/>
                                             <constraint firstItem="Iw6-Fs-eBF" firstAttribute="top" secondItem="zUt-Tz-oVD" secondAttribute="bottom" constant="9" id="jZQ-Jj-GPx"/>
                                             <constraint firstItem="s0r-N4-v2P" firstAttribute="leading" secondItem="D0P-Dp-ZLw" secondAttribute="leading" constant="20" id="kOk-AG-mPJ"/>
@@ -276,7 +276,7 @@
                                     <constraint firstItem="D0P-Dp-ZLw" firstAttribute="width" secondItem="Kdy-Ks-JT8" secondAttribute="width" id="Qvt-Z0-NB2"/>
                                     <constraint firstAttribute="bottom" secondItem="D0P-Dp-ZLw" secondAttribute="bottom" constant="-22" id="fOA-jT-Ut9"/>
                                     <constraint firstItem="D0P-Dp-ZLw" firstAttribute="top" secondItem="Kdy-Ks-JT8" secondAttribute="top" id="lVt-J2-jpu"/>
-                                    <constraint firstItem="bkf-jz-kxY" firstAttribute="top" secondItem="Kdy-Ks-JT8" secondAttribute="top" constant="664" id="ooY-uq-s1w"/>
+                                    <constraint firstItem="bkf-jz-kxY" firstAttribute="top" secondItem="Kdy-Ks-JT8" secondAttribute="top" constant="625" id="ooY-uq-s1w"/>
                                     <constraint firstItem="D0P-Dp-ZLw" firstAttribute="leading" secondItem="Kdy-Ks-JT8" secondAttribute="leading" id="q1y-eZ-JzA"/>
                                 </constraints>
                                 <connections>
@@ -420,7 +420,7 @@
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTE-ab-roc">
-                                    <rect key="frame" x="362" y="242" width="24" height="24"/>
+                                    <rect key="frame" x="362" y="242" width="16" height="22"/>
                                     <state key="normal" image="notfavorite"/>
                                     <connections>
                                         <action selector="addFavoriteAction:" destination="7yd-sa-vrx" eventType="touchUpInside" id="jzb-ZN-uBm"/>
@@ -795,6 +795,6 @@
         <image name="notfavorite" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6rs-wE-5t6"/>
+        <segue reference="Lfu-kX-ayk"/>
     </inferredMetricsTieBreakers>
 </document>

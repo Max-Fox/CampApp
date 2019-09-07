@@ -16,11 +16,11 @@ class CollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.layer.cornerRadius = 10
-        image.layer.cornerRadius = 10
-        self.layer.shadowRadius = 2
-        layer.shadowOpacity = 0.3
-        layer.shadowOffset = CGSize(width: 5, height: 8)
+        self.layer.cornerRadius = 5
+        image.layer.cornerRadius = 5
+        self.layer.shadowRadius = 1
+        layer.shadowOpacity = 0.2
+        layer.shadowOffset = CGSize(width: 3, height: 5)
         
         self.clipsToBounds = false
         
