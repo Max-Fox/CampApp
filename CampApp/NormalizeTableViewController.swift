@@ -98,8 +98,6 @@ class NormalizeTableViewController: UITableViewController {
         } else {
             cell.sizeInWinterLabel.text = food.sizeInWinter
         }
-        
-        
         return cell
     }
  
@@ -122,6 +120,14 @@ class NormalizeTableViewController: UITableViewController {
         countPersonButtonItem.title = "\(Int(stepperNormalize.value))"
         tableView.reloadData()
     }
+    
+    @IBAction func pushInfoAction(_ sender: UIBarButtonItem) {
+        let alertVC = UIAlertController(title: "Описание", message: "Информация представлена в граммах на одного человека на один день (в правом верхнем углу можно изменить кол-во человек). ", preferredStyle: .alert)
+        let actionOK = UIAlertAction(title: "Понятно", style: .default)
+        alertVC.addAction(actionOK)
+        present(alertVC, animated: true)
+    }
+    
     
 }
 extension NormalizeTableViewController: UISearchResultsUpdating {

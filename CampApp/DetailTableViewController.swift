@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import UserNotifications
+
 class DetailTableViewController: UITableViewController {
     
     
@@ -20,6 +22,8 @@ class DetailTableViewController: UITableViewController {
     var favoriteFood: [FavoriteFood] = []
     var doneStep: [Bool] = []
     
+    //let notificationCenter = UNUserNotificationCenter.current()
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -126,12 +130,12 @@ class DetailTableViewController: UITableViewController {
         if(check == 0){
         favoriteIcon.setImage(UIImage(named: "favorite"), for: .normal)
         self.saveFood(foodName: textLabel)
+            appDelegate?.sheldureNotification(notificationTitle: "Сохранено в CoreData", notificationContent: #"Рецепт "\#(textLabel)" сохранен"#)
         } else {
             deleteFood(indexFood: indexFood)
             favoriteIcon.setImage(UIImage(named: "notfavorite"), for: .normal)
+            appDelegate?.sheldureNotification(notificationTitle: "Удалено из CoreData", notificationContent: #"Рецепт "\#(textLabel)" удален"#)
         }
-        
-        
     }
     
     func deleteFood(indexFood: Int) {

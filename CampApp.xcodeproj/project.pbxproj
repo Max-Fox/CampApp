@@ -38,6 +38,21 @@
 		3F7B387F2290BBC800FEA274 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B387E2290BBC800FEA274 /* DetailTableViewController.swift */; };
 		3F7B38812290BE7600FEA274 /* TableViewParalax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B38802290BE7600FEA274 /* TableViewParalax.swift */; };
 		3F7B38832290D0B400FEA274 /* жульен.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B38822290D0B400FEA274 /* жульен.jpg */; };
+		3F8F4E882322E82E0020DF80 /* shulym.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E832322E82E0020DF80 /* shulym.jpg */; };
+		3F8F4E892322E82E0020DF80 /* cremSoup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E842322E82E0020DF80 /* cremSoup.jpg */; };
+		3F8F4E8A2322E82E0020DF80 /* soupWithBread.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E852322E82E0020DF80 /* soupWithBread.jpg */; };
+		3F8F4E8B2322E82E0020DF80 /* ramen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E862322E82E0020DF80 /* ramen.jpg */; };
+		3F8F4E8C2322E82E0020DF80 /* uxa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E872322E82E0020DF80 /* uxa.jpg */; };
+		3F8F4E902322EFC70020DF80 /* grechaWithOvoshi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E8F2322EFC70020DF80 /* grechaWithOvoshi.jpg */; };
+		3F8F4E922322F2900020DF80 /* bulgur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E912322F2900020DF80 /* bulgur.jpg */; };
+		3F8F4E942322F49B0020DF80 /* breadChapati.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E932322F49B0020DF80 /* breadChapati.jpg */; };
+		3F8F4E962322F5D50020DF80 /* irishRagy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E952322F5D50020DF80 /* irishRagy.jpg */; };
+		3F8F4E982322FE980020DF80 /* plovFromBulgur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E972322FE970020DF80 /* plovFromBulgur.jpg */; };
+		3F8F4E9A232301F70020DF80 /* fasolWithRis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E99232301F70020DF80 /* fasolWithRis.jpg */; };
+		3F8F4E9C232304AB0020DF80 /* saloWithPerec.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E9B232304AB0020DF80 /* saloWithPerec.jpg */; };
+		3F8F4E9E232306690020DF80 /* kabachok.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E9D232306680020DF80 /* kabachok.jpg */; };
+		3F8F4EA0232307340020DF80 /* ramenWithCheeze.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4E9F232307340020DF80 /* ramenWithCheeze.jpg */; };
+		3F8F4EA2232320C00020DF80 /* soupWithGrib.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4EA1232320C00020DF80 /* soupWithGrib.jpg */; };
 		3FBBC210229180EB001898D1 /* star-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBBC20F229180EB001898D1 /* star-7.png */; };
 		3FBBC212229320EF001898D1 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBBC211229320EF001898D1 /* FavoritesTableViewController.swift */; };
 		3FBBC2142294A14E001898D1 /* ShowAllFoodCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBBC2132294A14E001898D1 /* ShowAllFoodCollectionViewController.swift */; };
@@ -78,6 +93,21 @@
 		3F7B387E2290BBC800FEA274 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		3F7B38802290BE7600FEA274 /* TableViewParalax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewParalax.swift; sourceTree = "<group>"; };
 		3F7B38822290D0B400FEA274 /* жульен.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "жульен.jpg"; path = "../../../../../Downloads/жульен.jpg"; sourceTree = "<group>"; };
+		3F8F4E832322E82E0020DF80 /* shulym.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shulym.jpg; sourceTree = "<group>"; };
+		3F8F4E842322E82E0020DF80 /* cremSoup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cremSoup.jpg; sourceTree = "<group>"; };
+		3F8F4E852322E82E0020DF80 /* soupWithBread.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soupWithBread.jpg; sourceTree = "<group>"; };
+		3F8F4E862322E82E0020DF80 /* ramen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ramen.jpg; sourceTree = "<group>"; };
+		3F8F4E872322E82E0020DF80 /* uxa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uxa.jpg; sourceTree = "<group>"; };
+		3F8F4E8F2322EFC70020DF80 /* grechaWithOvoshi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grechaWithOvoshi.jpg; sourceTree = "<group>"; };
+		3F8F4E912322F2900020DF80 /* bulgur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bulgur.jpg; sourceTree = "<group>"; };
+		3F8F4E932322F49B0020DF80 /* breadChapati.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = breadChapati.jpg; sourceTree = "<group>"; };
+		3F8F4E952322F5D50020DF80 /* irishRagy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = irishRagy.jpg; sourceTree = "<group>"; };
+		3F8F4E972322FE970020DF80 /* plovFromBulgur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plovFromBulgur.jpg; sourceTree = "<group>"; };
+		3F8F4E99232301F70020DF80 /* fasolWithRis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fasolWithRis.jpg; sourceTree = "<group>"; };
+		3F8F4E9B232304AB0020DF80 /* saloWithPerec.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = saloWithPerec.jpg; sourceTree = "<group>"; };
+		3F8F4E9D232306680020DF80 /* kabachok.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kabachok.jpg; sourceTree = "<group>"; };
+		3F8F4E9F232307340020DF80 /* ramenWithCheeze.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ramenWithCheeze.jpg; sourceTree = "<group>"; };
+		3F8F4EA1232320C00020DF80 /* soupWithGrib.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soupWithGrib.jpg; sourceTree = "<group>"; };
 		3FBBC20F229180EB001898D1 /* star-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star-7.png"; path = "Assets.xcassets/star-7.png"; sourceTree = "<group>"; };
 		3FBBC211229320EF001898D1 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		3FBBC2132294A14E001898D1 /* ShowAllFoodCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllFoodCollectionViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +183,7 @@
 		3F7B384D228B3DCC00FEA274 /* CampApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F8F4E822322E8170020DF80 /* foodImage */,
 				3F6E864022B1B4E400ECF71A /* Assets.xcassets */,
 				3FBBC20F229180EB001898D1 /* star-7.png */,
 				3F6E864922B2CDA500ECF71A /* drinkImage */,
@@ -192,6 +223,28 @@
 				3F7B3870228CB6B300FEA274 /* 1.jpg */,
 			);
 			path = foodImage;
+			sourceTree = "<group>";
+		};
+		3F8F4E822322E8170020DF80 /* foodImage */ = {
+			isa = PBXGroup;
+			children = (
+				3F8F4EA1232320C00020DF80 /* soupWithGrib.jpg */,
+				3F8F4E9F232307340020DF80 /* ramenWithCheeze.jpg */,
+				3F8F4E9D232306680020DF80 /* kabachok.jpg */,
+				3F8F4E9B232304AB0020DF80 /* saloWithPerec.jpg */,
+				3F8F4E99232301F70020DF80 /* fasolWithRis.jpg */,
+				3F8F4E972322FE970020DF80 /* plovFromBulgur.jpg */,
+				3F8F4E952322F5D50020DF80 /* irishRagy.jpg */,
+				3F8F4E932322F49B0020DF80 /* breadChapati.jpg */,
+				3F8F4E912322F2900020DF80 /* bulgur.jpg */,
+				3F8F4E8F2322EFC70020DF80 /* grechaWithOvoshi.jpg */,
+				3F8F4E842322E82E0020DF80 /* cremSoup.jpg */,
+				3F8F4E862322E82E0020DF80 /* ramen.jpg */,
+				3F8F4E832322E82E0020DF80 /* shulym.jpg */,
+				3F8F4E852322E82E0020DF80 /* soupWithBread.jpg */,
+				3F8F4E872322E82E0020DF80 /* uxa.jpg */,
+			);
+			name = foodImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,20 +309,35 @@
 				3F7B3873228CB6E900FEA274 /* 3.jpg in Resources */,
 				3F6E864B22B2D0FD00ECF71A /* teaKedr.jpg in Resources */,
 				3F6E864D22B2D5B300ECF71A /* teaTayoj.jpg in Resources */,
+				3F8F4E882322E82E0020DF80 /* shulym.jpg in Resources */,
+				3F8F4EA0232307340020DF80 /* ramenWithCheeze.jpg in Resources */,
+				3F8F4E892322E82E0020DF80 /* cremSoup.jpg in Resources */,
 				3F7B385C228B3DCE00FEA274 /* LaunchScreen.storyboard in Resources */,
 				3F6E863922B0FD3900ECF71A /* advice.json in Resources */,
 				3F7B38832290D0B400FEA274 /* жульен.jpg in Resources */,
+				3F8F4E902322EFC70020DF80 /* grechaWithOvoshi.jpg in Resources */,
 				3F6E863B22B129F000ECF71A /* normalizeFood.plist in Resources */,
+				3F8F4E982322FE980020DF80 /* plovFromBulgur.jpg in Resources */,
 				3FBBC210229180EB001898D1 /* star-7.png in Resources */,
+				3F8F4E922322F2900020DF80 /* bulgur.jpg in Resources */,
+				3F8F4E9A232301F70020DF80 /* fasolWithRis.jpg in Resources */,
 				3F6E864822B2CD9300ECF71A /* teatByXvoya.jpg in Resources */,
 				3F6E865122B2D6CF00ECF71A /* glintvein.jpg in Resources */,
+				3F8F4E8C2322E82E0020DF80 /* uxa.jpg in Resources */,
 				3F6EBC1522A27CDA00FFB30C /* data.plist in Resources */,
 				3F7B3854228B3DCC00FEA274 /* Main.storyboard in Resources */,
 				3F6E864322B1BA5B00ECF71A /* adviceFoot.jpg in Resources */,
 				3F7B3877228E054800FEA274 /* test.json in Resources */,
+				3F8F4E9C232304AB0020DF80 /* saloWithPerec.jpg in Resources */,
+				3F8F4E8B2322E82E0020DF80 /* ramen.jpg in Resources */,
+				3F8F4E942322F49B0020DF80 /* breadChapati.jpg in Resources */,
+				3F8F4E9E232306690020DF80 /* kabachok.jpg in Resources */,
+				3F8F4E8A2322E82E0020DF80 /* soupWithBread.jpg in Resources */,
+				3F8F4E962322F5D50020DF80 /* irishRagy.jpg in Resources */,
 				3F6E864122B1B4E500ECF71A /* Assets.xcassets in Resources */,
 				3F7B387B22906EE900FEA274 /* 01.jpg in Resources */,
 				3F6E864622B1BC0E00ECF71A /* advicePalatka.jpg in Resources */,
+				3F8F4EA2232320C00020DF80 /* soupWithGrib.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
