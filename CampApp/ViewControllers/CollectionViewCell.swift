@@ -25,7 +25,6 @@ class CollectionViewCell: UICollectionViewCell {
         self.clipsToBounds = false
         
         label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        
         label.sizeToFit()
         
     }

@@ -22,7 +22,7 @@
 		3F6E864B22B2D0FD00ECF71A /* teaKedr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F6E864A22B2D0FC00ECF71A /* teaKedr.jpg */; };
 		3F6E864D22B2D5B300ECF71A /* teaTayoj.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F6E864C22B2D5B300ECF71A /* teaTayoj.jpg */; };
 		3F6E865122B2D6CF00ECF71A /* glintvein.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F6E865022B2D6CF00ECF71A /* glintvein.jpg */; };
-		3F6EBC1522A27CDA00FFB30C /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6EBC1422A27CDA00FFB30C /* data.plist */; };
+		3F6EBC1522A27CDA00FFB30C /* recipeDrink.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6EBC1422A27CDA00FFB30C /* recipeDrink.plist */; };
 		3F7B384F228B3DCC00FEA274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B384E228B3DCC00FEA274 /* AppDelegate.swift */; };
 		3F7B3851228B3DCC00FEA274 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B3850228B3DCC00FEA274 /* ViewController.swift */; };
 		3F7B3854228B3DCC00FEA274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B3852228B3DCC00FEA274 /* Main.storyboard */; };
@@ -30,7 +30,7 @@
 		3F7B385C228B3DCE00FEA274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B385A228B3DCE00FEA274 /* LaunchScreen.storyboard */; };
 		3F7B386A228B519F00FEA274 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B3869228B519F00FEA274 /* CollectionViewCell.swift */; };
 		3F7B3875228DD32300FEA274 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B3874228DD32300FEA274 /* Model.swift */; };
-		3F7B3877228E054800FEA274 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B3876228E054800FEA274 /* test.json */; };
+		3F7B3877228E054800FEA274 /* recipeFood.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B3876228E054800FEA274 /* recipeFood.json */; };
 		3F7B387D2290810D00FEA274 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B387C2290810D00FEA274 /* TableViewCell.swift */; };
 		3F7B387F2290BBC800FEA274 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B387E2290BBC800FEA274 /* DetailTableViewController.swift */; };
 		3F7B38812290BE7600FEA274 /* TableViewParalax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B38802290BE7600FEA274 /* TableViewParalax.swift */; };
@@ -51,6 +51,8 @@
 		3F8F4EA2232320C00020DF80 /* soupWithGrib.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4EA1232320C00020DF80 /* soupWithGrib.jpg */; };
 		3F8F4EA423243FB30020DF80 /* saveInCamp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4EA323243FB20020DF80 /* saveInCamp.jpg */; };
 		3F8F4EA62324412C0020DF80 /* fire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4EA52324412C0020DF80 /* fire.jpg */; };
+		3FA10139233110F400489141 /* ManagerLoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA10138233110F400489141 /* ManagerLoadData.swift */; };
+		3FA1013B2331166600489141 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1013A2331166600489141 /* Extensions.swift */; };
 		3FBBC210229180EB001898D1 /* star-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBBC20F229180EB001898D1 /* star-7.png */; };
 		3FBBC212229320EF001898D1 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBBC211229320EF001898D1 /* FavoritesTableViewController.swift */; };
 		3FBBC2142294A14E001898D1 /* ShowAllFoodCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBBC2132294A14E001898D1 /* ShowAllFoodCollectionViewController.swift */; };
@@ -77,7 +79,7 @@
 		3F6E864A22B2D0FC00ECF71A /* teaKedr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teaKedr.jpg; sourceTree = "<group>"; };
 		3F6E864C22B2D5B300ECF71A /* teaTayoj.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teaTayoj.jpg; sourceTree = "<group>"; };
 		3F6E865022B2D6CF00ECF71A /* glintvein.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = glintvein.jpg; sourceTree = "<group>"; };
-		3F6EBC1422A27CDA00FFB30C /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		3F6EBC1422A27CDA00FFB30C /* recipeDrink.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = recipeDrink.plist; sourceTree = "<group>"; };
 		3F7B384B228B3DCC00FEA274 /* CampApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7B384E228B3DCC00FEA274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7B3850228B3DCC00FEA274 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 		3F7B385D228B3DCE00FEA274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7B3869228B519F00FEA274 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		3F7B3874228DD32300FEA274 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		3F7B3876228E054800FEA274 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		3F7B3876228E054800FEA274 /* recipeFood.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recipeFood.json; sourceTree = "<group>"; };
 		3F7B387C2290810D00FEA274 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3F7B387E2290BBC800FEA274 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		3F7B38802290BE7600FEA274 /* TableViewParalax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewParalax.swift; sourceTree = "<group>"; };
@@ -108,6 +110,8 @@
 		3F8F4EA1232320C00020DF80 /* soupWithGrib.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soupWithGrib.jpg; sourceTree = "<group>"; };
 		3F8F4EA323243FB20020DF80 /* saveInCamp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = saveInCamp.jpg; sourceTree = "<group>"; };
 		3F8F4EA52324412C0020DF80 /* fire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fire.jpg; path = CampApp/Image/adImage/fire.jpg; sourceTree = SOURCE_ROOT; };
+		3FA10138233110F400489141 /* ManagerLoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerLoadData.swift; sourceTree = "<group>"; };
+		3FA1013A2331166600489141 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3FBBC20F229180EB001898D1 /* star-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-7.png"; sourceTree = "<group>"; };
 		3FBBC211229320EF001898D1 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		3FBBC2132294A14E001898D1 /* ShowAllFoodCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllFoodCollectionViewController.swift; sourceTree = "<group>"; };
@@ -184,12 +188,12 @@
 				3FA101362330D56B00489141 /* Image */,
 				3F6E864022B1B4E400ECF71A /* Assets.xcassets */,
 				3F7B3852228B3DCC00FEA274 /* Main.storyboard */,
-				3F7B387C2290810D00FEA274 /* TableViewCell.swift */,
 				3F7B3850228B3DCC00FEA274 /* ViewController.swift */,
-				3F7B3869228B519F00FEA274 /* CollectionViewCell.swift */,
 				3F7B385A228B3DCE00FEA274 /* LaunchScreen.storyboard */,
 				3F7B385D228B3DCE00FEA274 /* Info.plist */,
 				3F7B3855228B3DCC00FEA274 /* CampApp.xcdatamodeld */,
+				3FA10138233110F400489141 /* ManagerLoadData.swift */,
+				3FA1013A2331166600489141 /* Extensions.swift */,
 			);
 			path = CampApp;
 			sourceTree = "<group>";
@@ -197,6 +201,8 @@
 		3FA1012C2330D08800489141 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3F7B387C2290810D00FEA274 /* TableViewCell.swift */,
+				3F7B3869228B519F00FEA274 /* CollectionViewCell.swift */,
 				3FA101302330D29700489141 /* FoodCalculationVC */,
 				3FA1012F2330D1CB00489141 /* FavoritesVC */,
 				3FA1012E2330D19D00489141 /* AllFoodCollectionVC */,
@@ -247,8 +253,8 @@
 			children = (
 				3F6E863A22B129EF00ECF71A /* normalizeFood.plist */,
 				3F6E863822B0FD3800ECF71A /* advice.json */,
-				3F6EBC1422A27CDA00FFB30C /* data.plist */,
-				3F7B3876228E054800FEA274 /* test.json */,
+				3F6EBC1422A27CDA00FFB30C /* recipeDrink.plist */,
+				3F7B3876228E054800FEA274 /* recipeFood.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -378,11 +384,11 @@
 				3F6E865122B2D6CF00ECF71A /* glintvein.jpg in Resources */,
 				3F8F4E8C2322E82E0020DF80 /* uxa.jpg in Resources */,
 				3FBE582C23251915008D0500 /* 01.jpg in Resources */,
-				3F6EBC1522A27CDA00FFB30C /* data.plist in Resources */,
+				3F6EBC1522A27CDA00FFB30C /* recipeDrink.plist in Resources */,
 				3F8F4EA62324412C0020DF80 /* fire.jpg in Resources */,
 				3F7B3854228B3DCC00FEA274 /* Main.storyboard in Resources */,
 				3F6E864322B1BA5B00ECF71A /* adviceFoot.jpg in Resources */,
-				3F7B3877228E054800FEA274 /* test.json in Resources */,
+				3F7B3877228E054800FEA274 /* recipeFood.json in Resources */,
 				3F8F4E9C232304AB0020DF80 /* saloWithPerec.jpg in Resources */,
 				3F8F4E8B2322E82E0020DF80 /* ramen.jpg in Resources */,
 				3F8F4E942322F49B0020DF80 /* breadChapati.jpg in Resources */,
@@ -411,6 +417,8 @@
 				3FBBC212229320EF001898D1 /* FavoritesTableViewController.swift in Sources */,
 				3F6E863F22B1649F00ECF71A /* NormalizeTableViewCell.swift in Sources */,
 				3F7B387F2290BBC800FEA274 /* DetailTableViewController.swift in Sources */,
+				3FA1013B2331166600489141 /* Extensions.swift in Sources */,
+				3FA10139233110F400489141 /* ManagerLoadData.swift in Sources */,
 				3FBBC2142294A14E001898D1 /* ShowAllFoodCollectionViewController.swift in Sources */,
 				3F7B38812290BE7600FEA274 /* TableViewParalax.swift in Sources */,
 				3F6E862F22ABCDAE00ECF71A /* FoodCalculationViewController.swift in Sources */,

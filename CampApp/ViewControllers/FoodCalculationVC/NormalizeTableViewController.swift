@@ -9,7 +9,7 @@
 import UIKit
 
 class NormalizeTableViewController: UITableViewController {
-  
+    
     @IBOutlet weak var countPersonButtonItem: UIBarButtonItem!
     @IBOutlet weak var stepperNormalize: UIStepper!
     
@@ -27,15 +27,14 @@ class NormalizeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         loadPlistFile()
         
         countPersonButtonItem.isEnabled = false
         countPersonButtonItem.title = "1"
         
-        navigationController?.navigationBar.topItem?.title = "Раскладка"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        setupNavigationBar(withTitle: "Раскладка", large: true)
         
         //Setup SearchController
         searchController.searchResultsUpdater = self
@@ -48,14 +47,14 @@ class NormalizeTableViewController: UITableViewController {
         
         headerTable.adjustsFontSizeToFitWidth = true
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if isFiltering {
@@ -63,7 +62,7 @@ class NormalizeTableViewController: UITableViewController {
         }
         return normalizeFood.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NormalizeTableViewCell
@@ -92,7 +91,7 @@ class NormalizeTableViewController: UITableViewController {
         }
         
         cell.sizeInSummerLabel.adjustsFontSizeToFitWidth = true
-       
+        
         if(food.sizeInWinter != "") {
             cell.sizeInWinterLabel.text = "\(Int(food.sizeInWinter!)! * Int(stepperNormalize.value))"
         } else {
@@ -100,8 +99,8 @@ class NormalizeTableViewController: UITableViewController {
         }
         return cell
     }
- 
-
+    
+    
     func loadPlistFile() {
         if let path = Bundle.main.path(forResource: "normalizeFood", ofType: "plist") {
             let dataArray = NSArray(contentsOfFile: path)!

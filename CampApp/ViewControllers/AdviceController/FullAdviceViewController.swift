@@ -9,7 +9,7 @@
 import UIKit
 
 class FullAdviceViewController: UIViewController {
-
+    
     @IBOutlet weak var imageViewAdvice: UIImageView!
     @IBOutlet weak var titleAdviceLable: UILabel!
     @IBOutlet weak var aboutAdviceLabel: UILabel!
@@ -22,10 +22,8 @@ class FullAdviceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItemTitle.title = textTitleLabel
-        
-        
         
         // Do any additional setup after loading the view.
         titleAdviceLable.text = textTitleLabel
@@ -35,15 +33,4 @@ class FullAdviceViewController: UIViewController {
         aboutAdviceLabel.sizeToFit()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

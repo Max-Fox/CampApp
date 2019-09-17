@@ -9,7 +9,7 @@
 import UIKit
 
 class FoodCalculationViewController: UIViewController {
-
+    
     @IBOutlet weak var pickerViewTypeFood: UIPickerView!
     var typeFood = ["Первые блюда", "Вторые блюда", "Напитки"]
     
@@ -17,9 +17,7 @@ class FoodCalculationViewController: UIViewController {
         super.viewDidLoad()
         print("viewDidLoad FoodCalculationViewController")
         
-        navigationController?.navigationBar.topItem?.title = "Раскладка"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        // Do any additional setup after loading the view.
+        setupNavigationBar(withTitle: "Раскладка", large: true)
         
         pickerViewTypeFood.dataSource = self
         pickerViewTypeFood.delegate = self
@@ -44,7 +42,7 @@ extension FoodCalculationViewController: UIPickerViewDataSource {
 }
 extension FoodCalculationViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-       
+        
         return typeFood[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

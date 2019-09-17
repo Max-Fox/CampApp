@@ -9,7 +9,7 @@
 import UIKit
 
 class TableViewParalax: UITableView {
-
+    
     var height: NSLayoutConstraint?
     var bottom: NSLayoutConstraint?
     
@@ -28,5 +28,5 @@ class TableViewParalax: UITableView {
         header.clipsToBounds = offsetY <= 0
     }
     
-
+    
 }

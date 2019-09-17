@@ -12,7 +12,7 @@ class ShowAllFoodCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var textLabelName: UILabel! 
     @IBOutlet weak var image: UIImageView!
     
- 
+    
     override func layoutSubviews() {
         self.layer.cornerRadius = 5
         self.layer.shadowOpacity = 0.2

@@ -22,7 +22,6 @@ class DetailTableViewController: UITableViewController {
     var favoriteFood: [FavoriteFood] = []
     var doneStep: [Bool] = []
     
-    //let notificationCenter = UNUserNotificationCenter.current()
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
     @IBOutlet weak var imageView: UIImageView!
@@ -30,19 +29,19 @@ class DetailTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         print("Заполнение Favorite inout")
         //ПЕРЕДЕЛАТЬ!!!! Каждый раз при переходе на view получает данные из CoreDate
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        let context = appDelegate.persistentContainer.viewContext
-//        let fetchRequest:  NSFetchRequest<FavoriteFood> = FavoriteFood.fetchRequest()
-//        do {
-//            favoriteFood = try context.fetch(fetchRequest)
-//        } catch {
-//            print(error.localizedDescription)
-//        }
+        //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //        let context = appDelegate.persistentContainer.viewContext
+        //        let fetchRequest:  NSFetchRequest<FavoriteFood> = FavoriteFood.fetchRequest()
+        //        do {
+        //            favoriteFood = try context.fetch(fetchRequest)
+        //        } catch {
+        //            print(error.localizedDescription)
+        //        }
         getFavoriteFood(array: &favoriteFood)
         
         //Заполняем массив выполнения шагов false
         for _ in 0..<steps.count {
-           doneStep.append(false)
+            doneStep.append(false)
         }
         
         
@@ -93,8 +92,6 @@ class DetailTableViewController: UITableViewController {
         cell.textLabel?.text = "Шаг \(steps[indexPath.row].numStep ?? 0): \(steps[indexPath.row].aboutStep ?? "Конец")"
         
         
-        // Configure the cell...
-      
         return cell
     }
     
@@ -117,8 +114,7 @@ class DetailTableViewController: UITableViewController {
     
     @IBAction func addFavoriteAction(_ sender: Any) {
         print("\(textLabel) добавлены в избранное")
-        //
-        //if(favoriteFood)
+        
         var indexFood = 0
         var check = 0
         for i in 0..<favoriteFood.count {
@@ -128,8 +124,8 @@ class DetailTableViewController: UITableViewController {
             }
         }
         if(check == 0){
-        favoriteIcon.setImage(UIImage(named: "favorite"), for: .normal)
-        self.saveFood(foodName: textLabel)
+            favoriteIcon.setImage(UIImage(named: "favorite"), for: .normal)
+            self.saveFood(foodName: textLabel)
             appDelegate?.sheldureNotification(notificationTitle: "Сохранено в CoreData", notificationContent: #"Рецепт "\#(textLabel)" сохранен"#)
         } else {
             deleteFood(indexFood: indexFood)
@@ -143,7 +139,6 @@ class DetailTableViewController: UITableViewController {
         context.delete(favoriteFood[indexFood])
         do {
             try context.save()
-            //print("DELETE")
         } catch let error as NSError {
             print(error.userInfo)
         }
@@ -152,8 +147,6 @@ class DetailTableViewController: UITableViewController {
     func saveFood(foodName: String){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-//        let entity = NSEntityDescription.entity(forEntityName: "FavoriteFood", in: context)
-//        let foodObject = NSManagedObject(entity: entity!, insertInto: context) as! FavoriteFood
         let foodObject = FavoriteFood(context: context)
         foodObject.foodName = foodName
         do {
