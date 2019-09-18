@@ -28,7 +28,6 @@ class NormalizeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         loadPlistFile()
         
         countPersonButtonItem.isEnabled = false
@@ -50,13 +49,7 @@ class NormalizeTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if isFiltering {
             return filteredNormalizeFood.count
         }
@@ -80,7 +73,7 @@ class NormalizeTableViewController: UITableViewController {
         } else {
             cell.sizeInPvdLabel.text = food.sizeInPvd
         }
-        // Configure the cell...
+       
         cell.TitleNormalizeLabel?.text = food.name
         cell.TitleNormalizeLabel.adjustsFontSizeToFitWidth = true
         

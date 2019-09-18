@@ -46,6 +46,6 @@ extension FoodCalculationViewController: UIPickerViewDelegate {
         return typeFood[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("ROW: \(row)")
+        
     }
 }

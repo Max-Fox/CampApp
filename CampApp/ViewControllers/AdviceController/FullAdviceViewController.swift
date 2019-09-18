@@ -24,8 +24,6 @@ class FullAdviceViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItemTitle.title = textTitleLabel
-        
-        // Do any additional setup after loading the view.
         titleAdviceLable.text = textTitleLabel
         aboutAdviceLabel.text = textAboutLabel
         imageViewAdvice.image = UIImage(named: textImageView)

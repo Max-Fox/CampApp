@@ -62,3 +62,4 @@ func parseJSONAdvice(in adviceArrayInJSON: inout Advices?) {
     }
     
 }
+

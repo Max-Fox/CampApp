@@ -29,7 +29,6 @@
 		3F7B3857228B3DCC00FEA274 /* CampApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B3855228B3DCC00FEA274 /* CampApp.xcdatamodeld */; };
 		3F7B385C228B3DCE00FEA274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B385A228B3DCE00FEA274 /* LaunchScreen.storyboard */; };
 		3F7B386A228B519F00FEA274 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B3869228B519F00FEA274 /* CollectionViewCell.swift */; };
-		3F7B3875228DD32300FEA274 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B3874228DD32300FEA274 /* Model.swift */; };
 		3F7B3877228E054800FEA274 /* recipeFood.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B3876228E054800FEA274 /* recipeFood.json */; };
 		3F7B387D2290810D00FEA274 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B387C2290810D00FEA274 /* TableViewCell.swift */; };
 		3F7B387F2290BBC800FEA274 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B387E2290BBC800FEA274 /* DetailTableViewController.swift */; };
@@ -51,8 +50,15 @@
 		3F8F4EA2232320C00020DF80 /* soupWithGrib.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4EA1232320C00020DF80 /* soupWithGrib.jpg */; };
 		3F8F4EA423243FB30020DF80 /* saveInCamp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4EA323243FB20020DF80 /* saveInCamp.jpg */; };
 		3F8F4EA62324412C0020DF80 /* fire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F4EA52324412C0020DF80 /* fire.jpg */; };
-		3FA10139233110F400489141 /* ManagerLoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA10138233110F400489141 /* ManagerLoadData.swift */; };
+		3FA10139233110F400489141 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA10138233110F400489141 /* LoadData.swift */; };
 		3FA1013B2331166600489141 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1013A2331166600489141 /* Extensions.swift */; };
+		3FA1013D23321D4B00489141 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1013C23321D4B00489141 /* Food.swift */; };
+		3FA1013F23321D6700489141 /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1013E23321D6700489141 /* Foods.swift */; };
+		3FA1014123321D7800489141 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1014023321D7800489141 /* Detail.swift */; };
+		3FA1014323321D8800489141 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1014223321D8800489141 /* Step.swift */; };
+		3FA1014523321D9B00489141 /* Advices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1014423321D9B00489141 /* Advices.swift */; };
+		3FA1014723321DA900489141 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1014623321DA900489141 /* Advice.swift */; };
+		3FA1014923321DC100489141 /* NormalizeFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1014823321DC100489141 /* NormalizeFood.swift */; };
 		3FBBC210229180EB001898D1 /* star-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBBC20F229180EB001898D1 /* star-7.png */; };
 		3FBBC212229320EF001898D1 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBBC211229320EF001898D1 /* FavoritesTableViewController.swift */; };
 		3FBBC2142294A14E001898D1 /* ShowAllFoodCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBBC2132294A14E001898D1 /* ShowAllFoodCollectionViewController.swift */; };
@@ -88,7 +94,6 @@
 		3F7B385B228B3DCE00FEA274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F7B385D228B3DCE00FEA274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7B3869228B519F00FEA274 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		3F7B3874228DD32300FEA274 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3F7B3876228E054800FEA274 /* recipeFood.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recipeFood.json; sourceTree = "<group>"; };
 		3F7B387C2290810D00FEA274 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3F7B387E2290BBC800FEA274 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
@@ -110,8 +115,15 @@
 		3F8F4EA1232320C00020DF80 /* soupWithGrib.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soupWithGrib.jpg; sourceTree = "<group>"; };
 		3F8F4EA323243FB20020DF80 /* saveInCamp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = saveInCamp.jpg; sourceTree = "<group>"; };
 		3F8F4EA52324412C0020DF80 /* fire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fire.jpg; path = CampApp/Image/adImage/fire.jpg; sourceTree = SOURCE_ROOT; };
-		3FA10138233110F400489141 /* ManagerLoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerLoadData.swift; sourceTree = "<group>"; };
+		3FA10138233110F400489141 /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
 		3FA1013A2331166600489141 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3FA1013C23321D4B00489141 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		3FA1013E23321D6700489141 /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
+		3FA1014023321D7800489141 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		3FA1014223321D8800489141 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		3FA1014423321D9B00489141 /* Advices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advices.swift; sourceTree = "<group>"; };
+		3FA1014623321DA900489141 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
+		3FA1014823321DC100489141 /* NormalizeFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizeFood.swift; sourceTree = "<group>"; };
 		3FBBC20F229180EB001898D1 /* star-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-7.png"; sourceTree = "<group>"; };
 		3FBBC211229320EF001898D1 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		3FBBC2132294A14E001898D1 /* ShowAllFoodCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllFoodCollectionViewController.swift; sourceTree = "<group>"; };
@@ -136,7 +148,13 @@
 		3F6E863622ABF3C100ECF71A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3F7B3874228DD32300FEA274 /* Model.swift */,
+				3FA1013C23321D4B00489141 /* Food.swift */,
+				3FA1013E23321D6700489141 /* Foods.swift */,
+				3FA1014023321D7800489141 /* Detail.swift */,
+				3FA1014223321D8800489141 /* Step.swift */,
+				3FA1014423321D9B00489141 /* Advices.swift */,
+				3FA1014623321DA900489141 /* Advice.swift */,
+				3FA1014823321DC100489141 /* NormalizeFood.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,7 +210,7 @@
 				3F7B385A228B3DCE00FEA274 /* LaunchScreen.storyboard */,
 				3F7B385D228B3DCE00FEA274 /* Info.plist */,
 				3F7B3855228B3DCC00FEA274 /* CampApp.xcdatamodeld */,
-				3FA10138233110F400489141 /* ManagerLoadData.swift */,
+				3FA10138233110F400489141 /* LoadData.swift */,
 				3FA1013A2331166600489141 /* Extensions.swift */,
 			);
 			path = CampApp;
@@ -410,15 +428,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F7B3875228DD32300FEA274 /* Model.swift in Sources */,
 				3F7B3851228B3DCC00FEA274 /* ViewController.swift in Sources */,
 				3FBBC2162294A3FB001898D1 /* ShowAllFoodCollectionViewCell.swift in Sources */,
+				3FA1013F23321D6700489141 /* Foods.swift in Sources */,
 				3F7B384F228B3DCC00FEA274 /* AppDelegate.swift in Sources */,
 				3FBBC212229320EF001898D1 /* FavoritesTableViewController.swift in Sources */,
 				3F6E863F22B1649F00ECF71A /* NormalizeTableViewCell.swift in Sources */,
+				3FA1014523321D9B00489141 /* Advices.swift in Sources */,
+				3FA1014323321D8800489141 /* Step.swift in Sources */,
 				3F7B387F2290BBC800FEA274 /* DetailTableViewController.swift in Sources */,
 				3FA1013B2331166600489141 /* Extensions.swift in Sources */,
-				3FA10139233110F400489141 /* ManagerLoadData.swift in Sources */,
+				3FA10139233110F400489141 /* LoadData.swift in Sources */,
 				3FBBC2142294A14E001898D1 /* ShowAllFoodCollectionViewController.swift in Sources */,
 				3F7B38812290BE7600FEA274 /* TableViewParalax.swift in Sources */,
 				3F6E862F22ABCDAE00ECF71A /* FoodCalculationViewController.swift in Sources */,
@@ -426,8 +446,12 @@
 				3F6E863522ABF0FA00ECF71A /* FullAdviceViewController.swift in Sources */,
 				3F7B386A228B519F00FEA274 /* CollectionViewCell.swift in Sources */,
 				3F6E863122ABE68B00ECF71A /* AdviceTableViewController.swift in Sources */,
+				3FA1014923321DC100489141 /* NormalizeFood.swift in Sources */,
 				3F7B387D2290810D00FEA274 /* TableViewCell.swift in Sources */,
+				3FA1013D23321D4B00489141 /* Food.swift in Sources */,
 				3F7B3857228B3DCC00FEA274 /* CampApp.xcdatamodeld in Sources */,
+				3FA1014723321DA900489141 /* Advice.swift in Sources */,
+				3FA1014123321D7800489141 /* Detail.swift in Sources */,
 				3F6E863322ABE6B200ECF71A /* AdviceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

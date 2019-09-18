@@ -14,18 +14,6 @@ class NormalizeTableViewCell: UITableViewCell {
     @IBOutlet weak var sizeInSummerLabel: UILabel!
     @IBOutlet weak var sizeInWinterLabel: UILabel!
     
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
     override func layoutSubviews() {
         TitleNormalizeLabel.sizeToFit()
     }

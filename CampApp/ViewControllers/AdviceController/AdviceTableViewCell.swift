@@ -21,12 +21,6 @@ class AdviceTableViewCell: UITableViewCell {
         
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        
-    }
-    
     override func layoutSubviews() {
         self.imageViewAdvice.layer.cornerRadius = 10
         self.imageViewAdvice.clipsToBounds = true

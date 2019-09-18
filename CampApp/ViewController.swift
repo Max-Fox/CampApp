@@ -23,9 +23,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var drinkFood: [Food]? = []
 
     
-   
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,8 +35,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         loadDrinkRecipeFromPListFile(in: &drinkFood)
         
         pageControlThirdFood.numberOfPages = drinkFood?.count ?? 0
-        
-        
     }
     
     
@@ -188,7 +183,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     @IBAction func changeValue(_ sender: UIPageControl) {
-        print("Change \(sender.currentPage)")
         thirdCV.scrollToItem(at: NSIndexPath(row: sender.currentPage, section: 0) as IndexPath, at: .right, animated: true)
     }
 }

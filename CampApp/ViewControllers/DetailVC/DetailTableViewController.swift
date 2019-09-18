@@ -28,15 +28,8 @@ class DetailTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         print("Заполнение Favorite inout")
+        
         //ПЕРЕДЕЛАТЬ!!!! Каждый раз при переходе на view получает данные из CoreDate
-        //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        //        let context = appDelegate.persistentContainer.viewContext
-        //        let fetchRequest:  NSFetchRequest<FavoriteFood> = FavoriteFood.fetchRequest()
-        //        do {
-        //            favoriteFood = try context.fetch(fetchRequest)
-        //        } catch {
-        //            print(error.localizedDescription)
-        //        }
         getFavoriteFood(array: &favoriteFood)
         
         //Заполняем массив выполнения шагов false
@@ -67,11 +60,6 @@ class DetailTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
