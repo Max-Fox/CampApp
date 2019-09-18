@@ -14,7 +14,6 @@ class FavoritesTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        
         let fetchRequest: NSFetchRequest<FavoriteFood> = FavoriteFood.fetchRequest()
         do{
             foodArray = try context.fetch(fetchRequest)

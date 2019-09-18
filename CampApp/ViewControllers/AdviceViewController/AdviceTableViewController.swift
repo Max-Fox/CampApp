@@ -10,16 +10,15 @@ import UIKit
 
 class AdviceTableViewController: UITableViewController {
     
+    @IBOutlet var adviceTableView: UITableView!
+    
     var adviceArrayInJSON: Advices?
     
-    @IBOutlet var adviceTableView: UITableView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationBar(withTitle: "Советы по походу", large: true)
         parseJSONAdvice(in: &adviceArrayInJSON)
-        
     }
     
     // MARK: - Table view data source
@@ -50,5 +49,4 @@ class AdviceTableViewController: UITableViewController {
             }
         }
     }
-    
 }

@@ -30,5 +30,4 @@ class FullAdviceViewController: UIViewController {
         
         aboutAdviceLabel.sizeToFit()
     }
-    
 }

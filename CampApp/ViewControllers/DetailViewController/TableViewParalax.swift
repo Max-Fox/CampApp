@@ -13,7 +13,6 @@ class TableViewParalax: UITableView {
     var height: NSLayoutConstraint?
     var bottom: NSLayoutConstraint?
     
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -27,6 +26,4 @@ class TableViewParalax: UITableView {
         height?.constant = max(header.bounds.height, header.bounds.height + offsetY)
         header.clipsToBounds = offsetY <= 0
     }
-    
-    
 }

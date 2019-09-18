@@ -12,8 +12,8 @@ class NormalizeTableViewController: UITableViewController {
     
     @IBOutlet weak var countPersonButtonItem: UIBarButtonItem!
     @IBOutlet weak var stepperNormalize: UIStepper!
-    
     @IBOutlet weak var headerTable: UILabel!
+    
     private var normalizeFood: [NormalizeFood] = []
     private var filteredNormalizeFood = [NormalizeFood]()
     private let searchController = UISearchController(searchResultsController: nil)
@@ -28,7 +28,7 @@ class NormalizeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadPlistFile()
+        loadPlistFile(in: &normalizeFood)
         
         countPersonButtonItem.isEnabled = false
         countPersonButtonItem.title = "1"
@@ -73,7 +73,7 @@ class NormalizeTableViewController: UITableViewController {
         } else {
             cell.sizeInPvdLabel.text = food.sizeInPvd
         }
-       
+        
         cell.TitleNormalizeLabel?.text = food.name
         cell.TitleNormalizeLabel.adjustsFontSizeToFitWidth = true
         
@@ -94,20 +94,7 @@ class NormalizeTableViewController: UITableViewController {
     }
     
     
-    func loadPlistFile() {
-        if let path = Bundle.main.path(forResource: "normalizeFood", ofType: "plist") {
-            let dataArray = NSArray(contentsOfFile: path)!
-            for dict in dataArray {
-                var tmpNormalize = NormalizeFood()
-                let normalizeDictionary = dict as! NSDictionary
-                tmpNormalize.name = normalizeDictionary["name"] as? String
-                tmpNormalize.sizeInPvd = normalizeDictionary["pvd"] as? String
-                tmpNormalize.sizeInSummer = normalizeDictionary["summer"] as? String
-                tmpNormalize.sizeInWinter = normalizeDictionary["winter"] as? String
-                normalizeFood.append(tmpNormalize)
-            }
-        }
-    }
+    
     @IBAction func stepperAction(_ sender: Any) {
         countPersonButtonItem.title = "\(Int(stepperNormalize.value))"
         tableView.reloadData()

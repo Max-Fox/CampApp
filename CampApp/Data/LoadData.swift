@@ -63,3 +63,17 @@ func parseJSONAdvice(in adviceArrayInJSON: inout Advices?) {
     
 }
 
+func loadPlistFile(in normalizeFood: inout [NormalizeFood]) {
+    if let path = Bundle.main.path(forResource: "normalizeFood", ofType: "plist") {
+        let dataArray = NSArray(contentsOfFile: path)!
+        for dict in dataArray {
+            var tmpNormalize = NormalizeFood()
+            let normalizeDictionary = dict as! NSDictionary
+            tmpNormalize.name = normalizeDictionary["name"] as? String
+            tmpNormalize.sizeInPvd = normalizeDictionary["pvd"] as? String
+            tmpNormalize.sizeInSummer = normalizeDictionary["summer"] as? String
+            tmpNormalize.sizeInWinter = normalizeDictionary["winter"] as? String
+            normalizeFood.append(tmpNormalize)
+        }
+    }
+}

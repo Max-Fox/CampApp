@@ -13,7 +13,7 @@
         <!--Главная-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CampApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CampApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -420,7 +420,7 @@
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTE-ab-roc">
-                                    <rect key="frame" x="362" y="242" width="16" height="22"/>
+                                    <rect key="frame" x="362" y="242" width="24" height="24"/>
                                     <state key="normal" image="notfavorite"/>
                                     <connections>
                                         <action selector="addFavoriteAction:" destination="7yd-sa-vrx" eventType="touchUpInside" id="jzb-ZN-uBm"/>
@@ -795,6 +795,6 @@
         <image name="notfavorite" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Lfu-kX-ayk"/>
+        <segue reference="6rs-wE-5t6"/>
     </inferredMetricsTieBreakers>
 </document>

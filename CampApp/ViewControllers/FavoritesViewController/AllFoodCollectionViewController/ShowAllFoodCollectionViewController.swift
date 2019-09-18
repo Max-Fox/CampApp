@@ -38,6 +38,7 @@ class ShowAllFoodCollectionViewController: UICollectionViewController, UICollect
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 250, height: 215)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "detailSegue") {
             //Определение, какая ячейка нажата
@@ -51,8 +52,40 @@ class ShowAllFoodCollectionViewController: UICollectionViewController, UICollect
             detailVC.textImagePath = (arrayFood[indexPath.row].Detail?.ImagePath!)!
             detailVC.steps = (arrayFood[indexPath.row].steps ?? [])
             detailVC.ingredients = (arrayFood[indexPath.row].Ingredients ?? "Нет описания")
-            
+            detailVC.delegate = self
             
         }
     }
 }
+
+extension ShowAllFoodCollectionViewController: DetailTableViewDelegate {
+    
+    func actionShowRecipe(message: String) {
+        let ac = UIAlertController(title: "Ингредиенты", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
+        ac.addAction(okAction)
+        self.present(ac, animated: true, completion: nil)
+    }
+    
+    func addFavoriteAction(favoriteFoods: inout [FavoriteFood], textLabel: String, icon: UIButton) {
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        var indexFood = 0
+        var check = 0
+        for i in 0..<favoriteFoods.count {
+            if(favoriteFoods[i].foodName == textLabel){
+                check = 1
+                indexFood = i
+            }
+        }
+        if(check == 0){
+            icon.setImage(UIImage(named: "favorite"), for: .normal)
+            saveFood(foodName: textLabel, favoriteFood: &favoriteFoods)
+            appDelegate?.sheldureNotification(notificationTitle: "Сохранено в CoreData", notificationContent: #"Рецепт "\#(textLabel)" сохранен"#)
+        } else {
+            deleteFood(indexFood: indexFood, favoriteFood: &favoriteFoods)
+            icon.setImage(UIImage(named: "notfavorite"), for: .normal)
+            appDelegate?.sheldureNotification(notificationTitle: "Удалено из CoreData", notificationContent: #"Рецепт "\#(textLabel)" удален"#)
+        }
+    }
+}
+

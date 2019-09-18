@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var collection1: UICollectionView!
     @IBOutlet weak var secondFoodCollectionView: UICollectionView!
     @IBOutlet weak var navigationTitle: UILabel!
@@ -18,15 +18,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var thirdCV: UICollectionView!
     @IBOutlet weak var pageControlThirdFood: UIPageControl!
     
-    
     var foodInJSON: Foods?
     var drinkFood: [Food]? = []
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         setupCollectionsView()
         setupNavigationBar(withTitle: "Главная", large: true)
         
@@ -47,7 +44,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         else {
             return foodInJSON?.secondFood?.count ?? 0
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,7 +51,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
             cell.label.text = foodInJSON?.firstFood![indexPath.row].Product
-            
             
             //Проверка на наличие ImagePath в JSON
             if (foodInJSON?.firstFood != nil) {
@@ -97,16 +92,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 }
             }
             
-            
             cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            
             
             return cell
         }
-        
-        
-        
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if (collectionView != thirdCV) {
             return CGSize(width: 200, height: 200)
@@ -116,21 +107,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("\(indexPath)")
         if(collectionView == secondFoodCollectionView){
             let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailSB") as! DetailTableViewController
             detailVC.textLabel = foodInJSON?.secondFood![indexPath.row].Product ?? "Без названия"
             detailVC.textImagePath = (foodInJSON?.secondFood![indexPath.row].Detail?.ImagePath!)!
             detailVC.steps = foodInJSON?.secondFood![indexPath.row].steps ?? []
             detailVC.ingredients = foodInJSON?.secondFood![indexPath.row].Ingredients ?? "Нет описания"
+            detailVC.delegate = self
             navigationController?.pushViewController(detailVC, animated: true)
         }
+        
         if(collectionView == thirdCV){
             let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailSB") as! DetailTableViewController
             detailVC.textLabel = drinkFood?[indexPath.row].Product ?? "Нет названия"
             detailVC.textImagePath = drinkFood?[indexPath.row].Detail?.ImagePath ?? "Нет фото"
             detailVC.steps = drinkFood?[indexPath.row].steps ?? []
             detailVC.ingredients = drinkFood?[indexPath.row].Ingredients ?? "Нет данных"
+            detailVC.delegate = self
             navigationController?.pushViewController(detailVC, animated: true)
         }
     }
@@ -158,6 +151,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             detailVC.textImagePath = (foodInJSON?.firstFood![indexPath.row].Detail?.ImagePath!)!
             detailVC.steps = (foodInJSON?.firstFood![indexPath.row].steps ?? [])
             detailVC.ingredients = (foodInJSON?.firstFood![indexPath.row].Ingredients ?? "Нет описания")
+            detailVC.delegate = self
         }
         if (segue.identifier == "ShowAllFirstFoodSegue") {
             print("Yes")
@@ -167,14 +161,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             showAllVC.navigationTitle = navigationTitle.text
         }
     }
+    
     @IBAction func showAllSecondFood(_ sender: Any) {
         let showAllController = storyboard?.instantiateViewController(withIdentifier: "ShowAllFood") as! ShowAllFoodCollectionViewController
         showAllController.arrayFood = foodInJSON?.secondFood ?? []
         showAllController.navigationTitle = "Вторые блюда"
         navigationController?.pushViewController(showAllController, animated: true)
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if(collectionView == thirdCV){
@@ -187,4 +180,43 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 }
 
+extension MainViewController: DetailTableViewDelegate {
+    
+    func actionShowRecipe(message: String) {
+        let ac = UIAlertController(title: "Ингредиенты", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
+        ac.addAction(okAction)
+        self.present(ac, animated: true, completion: nil)
+    }
+    
+    func addFavoriteAction(favoriteFoods: inout [FavoriteFood], textLabel: String, icon: UIButton) {
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        var indexFood = 0
+        var check = 0
+        for i in 0..<favoriteFoods.count {
+            if(favoriteFoods[i].foodName == textLabel){
+                check = 1
+                indexFood = i
+            }
+        }
+        if(check == 0){
+            icon.setImage(UIImage(named: "favorite"), for: .normal)
+            saveFood(foodName: textLabel, favoriteFood: &favoriteFoods)
+            appDelegate?.sheldureNotification(notificationTitle: "Сохранено в CoreData", notificationContent: #"Рецепт "\#(textLabel)" сохранен"#)
+        } else {
+            deleteFood(indexFood: indexFood, favoriteFood: &favoriteFoods)
+            icon.setImage(UIImage(named: "notfavorite"), for: .normal)
+            appDelegate?.sheldureNotification(notificationTitle: "Удалено из CoreData", notificationContent: #"Рецепт "\#(textLabel)" удален"#)
+        }
+    }
+}
 
+extension UIViewController {
+    func setupNavigationBar(withTitle titleName: String, large: Bool){
+        //Большой шрифт в заголовке
+        if large {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        }
+        title = titleName
+    }
+}
