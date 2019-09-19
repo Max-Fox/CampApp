@@ -9,7 +9,13 @@
 import UIKit
 import CoreData
 class FavoritesTableViewController: UITableViewController {
+    
     var foodArray: [FavoriteFood] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Избранное"
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -21,17 +27,11 @@ class FavoritesTableViewController: UITableViewController {
             print(error.localizedDescription)
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Избранное"
-    }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodArray.count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -39,5 +39,4 @@ class FavoritesTableViewController: UITableViewController {
         
         return cell
     }
-    
 }

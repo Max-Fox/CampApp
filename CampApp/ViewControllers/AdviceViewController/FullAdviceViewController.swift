@@ -15,7 +15,6 @@ class FullAdviceViewController: UIViewController {
     @IBOutlet weak var aboutAdviceLabel: UILabel!
     @IBOutlet weak var navigationItemTitle: UINavigationItem!
     
-    
     var textTitleLabel: String = ""
     var textAboutLabel: String = ""
     var textImageView: String = ""

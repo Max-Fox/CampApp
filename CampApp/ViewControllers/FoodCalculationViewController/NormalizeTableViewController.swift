@@ -56,7 +56,6 @@ class NormalizeTableViewController: UITableViewController {
         return normalizeFood.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NormalizeTableViewCell
         
@@ -93,8 +92,6 @@ class NormalizeTableViewController: UITableViewController {
         return cell
     }
     
-    
-    
     @IBAction func stepperAction(_ sender: Any) {
         countPersonButtonItem.title = "\(Int(stepperNormalize.value))"
         tableView.reloadData()
@@ -106,14 +103,14 @@ class NormalizeTableViewController: UITableViewController {
         alertVC.addAction(actionOK)
         present(alertVC, animated: true)
     }
-    
-    
 }
+
 extension NormalizeTableViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchText: searchController.searchBar.text!)
     }
+    
     private func filterContentForSearchText(searchText: String){
         filteredNormalizeFood = normalizeFood.filter({ (food: NormalizeFood) -> Bool in
             return food.name?.lowercased().contains(searchText.lowercased()) ?? false

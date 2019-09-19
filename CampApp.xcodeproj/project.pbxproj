@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F6E862F22ABCDAE00ECF71A /* FoodCalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E862E22ABCDAE00ECF71A /* FoodCalculationViewController.swift */; };
 		3F6E863122ABE68B00ECF71A /* AdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E863022ABE68B00ECF71A /* AdviceTableViewController.swift */; };
 		3F6E863322ABE6B200ECF71A /* AdviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E863222ABE6B200ECF71A /* AdviceTableViewCell.swift */; };
 		3F6E863522ABF0FA00ECF71A /* FullAdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E863422ABF0FA00ECF71A /* FullAdviceViewController.swift */; };
@@ -70,7 +69,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F6E862E22ABCDAE00ECF71A /* FoodCalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCalculationViewController.swift; sourceTree = "<group>"; };
 		3F6E863022ABE68B00ECF71A /* AdviceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceTableViewController.swift; sourceTree = "<group>"; };
 		3F6E863222ABE6B200ECF71A /* AdviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceTableViewCell.swift; sourceTree = "<group>"; };
 		3F6E863422ABF0FA00ECF71A /* FullAdviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullAdviceViewController.swift; sourceTree = "<group>"; };
@@ -258,7 +256,6 @@
 			children = (
 				3F6E863C22B14B6C00ECF71A /* NormalizeTableViewController.swift */,
 				3F6E863E22B1649F00ECF71A /* NormalizeTableViewCell.swift */,
-				3F6E862E22ABCDAE00ECF71A /* FoodCalculationViewController.swift */,
 			);
 			path = FoodCalculationViewController;
 			sourceTree = "<group>";
@@ -458,7 +455,6 @@
 				3FBBC2142294A14E001898D1 /* ShowAllFoodCollectionViewController.swift in Sources */,
 				3F7B38812290BE7600FEA274 /* TableViewParalax.swift in Sources */,
 				3FA1014B2332C5C200489141 /* WorkWithCoreData.swift in Sources */,
-				3F6E862F22ABCDAE00ECF71A /* FoodCalculationViewController.swift in Sources */,
 				3F6E863D22B14B6C00ECF71A /* NormalizeTableViewController.swift in Sources */,
 				3F6E863522ABF0FA00ECF71A /* FullAdviceViewController.swift in Sources */,
 				3F7B386A228B519F00FEA274 /* CollectionViewCell.swift in Sources */,

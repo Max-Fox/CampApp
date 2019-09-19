@@ -9,6 +9,7 @@
 import UIKit
 
 class ShowAllFoodCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var textLabelName: UILabel! 
     @IBOutlet weak var image: UIImageView!
     

@@ -21,10 +21,9 @@ func loadDrinkRecipeFromPListFile(in drinkFood: inout [Food]?){
         drink.Detail = Detail()
         drink.Detail?.ImagePath = detailDict["ImagePath"] as? String
         drink.Detail?.Discription = detailDict["Discription"] as? String
-        
         drink.Ingredients = drinkDictionary["Ingredients"] as? String
-        
         drink.steps = []
+        
         let arrayStep = drinkDictionary["Steps"] as? NSArray ?? []
         var countStep = 0
         for step in arrayStep {

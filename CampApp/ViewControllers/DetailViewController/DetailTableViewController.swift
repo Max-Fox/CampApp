@@ -103,6 +103,4 @@ class DetailTableViewController: UITableViewController {
     @IBAction func addFavoriteAction(_ sender: Any) {
         delegate?.addFavoriteAction(favoriteFoods: &favoriteFood, textLabel: textLabel, icon: favoriteIcon)
     }
-    
-
 }
