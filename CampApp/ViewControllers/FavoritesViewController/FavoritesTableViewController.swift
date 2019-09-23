@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+
 class FavoritesTableViewController: UITableViewController {
     
     var foodArray: [FavoriteFood] = []

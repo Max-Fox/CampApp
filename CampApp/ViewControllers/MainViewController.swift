@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var firstFoodCollectionView: UICollectionView!
     @IBOutlet weak var secondFoodCollectionView: UICollectionView!

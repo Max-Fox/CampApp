@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 func loadDrinkRecipeFromPListFile(in drinkFood: inout [Food]?){
     let pathToFile = Bundle.main.path(forResource: "recipeDrink", ofType: "plist")
     let dataArray = NSArray(contentsOfFile: pathToFile!)!
