@@ -144,7 +144,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             let indexPath = indexPaths![0] as NSIndexPath
             //Конец
             let detailVC = segue.destination as! DetailTableViewController
-            
             detailVC.textLabel = (foodInJSON?.firstFood![indexPath.row].Product)!
             detailVC.textImagePath = (foodInJSON?.firstFood![indexPath.row].Detail?.ImagePath!)!
             detailVC.steps = (foodInJSON?.firstFood![indexPath.row].steps ?? [])
@@ -152,9 +151,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             detailVC.delegate = self
         }
         if (segue.identifier == "ShowAllFirstFoodSegue") {
-            print("Yes")
             let showAllVC = segue.destination as! ShowAllFoodCollectionViewController
-            
             showAllVC.arrayFood = foodInJSON?.firstFood ?? []
             showAllVC.navigationTitle = navigationTitle.text
         }

@@ -47,7 +47,6 @@ func parceJSONFoodRecipe(in foodInJSON: inout Foods?) {
     }
 }
 
-
 func parseJSONAdvice(in adviceArrayInJSON: inout Advices?) {
     if let path = Bundle.main.path(forResource: "advice", ofType: "json") {
         let url = URL(fileURLWithPath: path)

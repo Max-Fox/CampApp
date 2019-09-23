@@ -22,11 +22,9 @@ class AdviceTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return adviceArrayInJSON?.advice?.count ?? 0
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AdviceTableViewCell
@@ -38,7 +36,6 @@ class AdviceTableViewController: UITableViewController {
     }
     
     // MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "fullAdviceSegue") {
             if let indexPath = self.adviceTableView.indexPathForSelectedRow{

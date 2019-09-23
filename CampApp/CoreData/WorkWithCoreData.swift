@@ -27,14 +27,12 @@ func saveFood(foodName: String, favoriteFood: inout [FavoriteFood]){
     do {
         try context.save()
         favoriteFood.append(foodObject)
-        print("Good saved!")
     } catch {
         print(error.localizedDescription)
     }
 }
 
 func getFavoriteFood(array: inout [FavoriteFood]){
-    print("Получение из CoreData")
     //Заполнение массива array избранными блюдами
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext

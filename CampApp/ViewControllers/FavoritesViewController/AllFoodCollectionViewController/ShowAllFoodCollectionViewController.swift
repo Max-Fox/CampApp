@@ -21,14 +21,12 @@ class ShowAllFoodCollectionViewController: UICollectionViewController, UICollect
     }
     
     // MARK: UICollectionViewDataSource
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayFood.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ShowAllFoodCollectionViewCell
-        
         cell.textLabelName.text = "\(arrayFood[indexPath.row].Product ?? "Нет имени")"
         cell.image.image = UIImage(named: arrayFood[indexPath.row].Detail?.ImagePath ?? "")
         
@@ -88,4 +86,3 @@ extension ShowAllFoodCollectionViewController: DetailTableViewDelegate {
         }
     }
 }
-
