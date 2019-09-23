@@ -24,6 +24,9 @@ class NormalizeTableViewController: UITableViewController {
     private var isFiltering: Bool {
         return searchController.isActive && !searchBarEmpty
     }
+    private var stepperValue: Int {
+        return Int(stepperNormalize.value)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +62,7 @@ class NormalizeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NormalizeTableViewCell
         
         var food: NormalizeFood
+        
         if isFiltering {
             food = filteredNormalizeFood[indexPath.row]
         } else {
@@ -66,7 +70,7 @@ class NormalizeTableViewController: UITableViewController {
         }
         
         if food.sizeInPvd != "" {
-            cell.sizeInPvdLabel.text = "\(Int(food.sizeInPvd!)! * Int(stepperNormalize.value))"
+            cell.sizeInPvdLabel.text = "\(Int(food.sizeInPvd!)! * stepperValue)"
         } else {
             cell.sizeInPvdLabel.text = food.sizeInPvd
         }
@@ -75,7 +79,7 @@ class NormalizeTableViewController: UITableViewController {
         cell.TitleNormalizeLabel.adjustsFontSizeToFitWidth = true
         
         if food.sizeInSummer != "" {
-            cell.sizeInSummerLabel.text = "\(Int(food.sizeInSummer!)! * Int(stepperNormalize.value))"
+            cell.sizeInSummerLabel.text = "\(Int(food.sizeInSummer!)! * stepperValue)"
         } else {
             cell.sizeInSummerLabel.text = food.sizeInSummer
         }
@@ -83,7 +87,7 @@ class NormalizeTableViewController: UITableViewController {
         cell.sizeInSummerLabel.adjustsFontSizeToFitWidth = true
         
         if food.sizeInWinter != "" {
-            cell.sizeInWinterLabel.text = "\(Int(food.sizeInWinter!)! * Int(stepperNormalize.value))"
+            cell.sizeInWinterLabel.text = "\(Int(food.sizeInWinter!)! * stepperValue)"
         } else {
             cell.sizeInWinterLabel.text = food.sizeInWinter
         }
@@ -91,7 +95,7 @@ class NormalizeTableViewController: UITableViewController {
     }
     
     @IBAction func stepperAction(_ sender: Any) {
-        countPersonButtonItem.title = "\(Int(stepperNormalize.value))"
+        countPersonButtonItem.title = "\(stepperValue)"
         tableView.reloadData()
     }
     
