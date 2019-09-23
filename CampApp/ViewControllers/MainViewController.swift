@@ -49,7 +49,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             
 
             if ((foodInJSON?.firstFood?[indexPath.row].Detail?.ImagePath) != nil) {
-                cell.image.image = UIImage(named: (foodInJSON?.secondFood![indexPath.row].Detail!.ImagePath)!)
+                cell.image.image = UIImage(named: (foodInJSON?.firstFood![indexPath.row].Detail!.ImagePath)!)
             }
             
             
