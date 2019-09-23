@@ -60,14 +60,14 @@ class ShowAllFoodCollectionViewController: UICollectionViewController, UICollect
 
 extension ShowAllFoodCollectionViewController: DetailTableViewDelegate {
     
-    func actionShowRecipe(message: String) {
+    func didPressInfoButton(message: String) {
         let ac = UIAlertController(title: "Ингредиенты", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
         ac.addAction(okAction)
         self.present(ac, animated: true, completion: nil)
     }
     
-    func addFavoriteAction(favoriteFoods: inout [FavoriteFood], textLabel: String, icon: UIButton) {
+    func didPressAddToFavoritesButton(favoriteFoods: inout [FavoriteFood], textLabel: String, icon: UIButton) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         var indexFood = 0
         var check = 0

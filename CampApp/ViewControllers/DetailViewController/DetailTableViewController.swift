@@ -10,11 +10,6 @@ import UIKit
 import CoreData
 import UserNotifications
 
-protocol DetailTableViewDelegate {
-    func addFavoriteAction(favoriteFoods: inout [FavoriteFood], textLabel: String, icon: UIButton)
-    func actionShowRecipe(message: String)
-}
-
 class DetailTableViewController: UITableViewController {
     
     @IBOutlet weak var favoriteIcon: UIButton!
@@ -36,12 +31,9 @@ class DetailTableViewController: UITableViewController {
         imageView.image = UIImage(named: textImagePath)
         navigationItem.title = "\(textLabel)"
         tableView.rowHeight = UITableView.automaticDimension
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("Заполнение Favorite inout")
-        
         //ПЕРЕДЕЛАТЬ!!!! Каждый раз при переходе на view получает данные из CoreDate
         getFavoriteFood(array: &favoriteFood)
         
@@ -97,10 +89,10 @@ class DetailTableViewController: UITableViewController {
     }
     
     @IBAction func actionShowRecipe(_ sender: Any) {
-        delegate?.actionShowRecipe(message: ingredients)
+        delegate?.didPressInfoButton(message: ingredients)
     }
     
     @IBAction func addFavoriteAction(_ sender: Any) {
-        delegate?.addFavoriteAction(favoriteFoods: &favoriteFood, textLabel: textLabel, icon: favoriteIcon)
+        delegate?.didPressAddToFavoritesButton(favoriteFoods: &favoriteFood, textLabel: textLabel, icon: favoriteIcon)
     }
 }
