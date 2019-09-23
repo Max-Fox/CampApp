@@ -36,7 +36,6 @@ class DetailTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         //ПЕРЕДЕЛАТЬ!!!! Каждый раз при переходе на view получает данные из CoreDate
         getFavoriteFood(array: &favoriteFood)
-        
         //Заполняем массив выполнения шагов false
         for _ in 0..<steps.count {
             doneStep.append(false)

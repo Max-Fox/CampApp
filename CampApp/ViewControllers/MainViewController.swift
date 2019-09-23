@@ -24,11 +24,8 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         setupCollectionsView()
         setupNavigationBar(withTitle: "Главная", large: true)
-        
-        //ManagerLoadData
         parceJSONFoodRecipe(in: &foodInJSON)
         loadDrinkRecipeFromPListFile(in: &drinkFood)
-        
         pageControlThirdFood.numberOfPages = drinkFood?.count ?? 0
     }
     
@@ -129,7 +126,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     func setupCollectionsView(){
         firstFoodCollectionView.showsHorizontalScrollIndicator = false
         secondFoodCollectionView.showsHorizontalScrollIndicator = false
-        
         //Прозрачный фон
         firstFoodCollectionView.backgroundColor = UIColor(white: 1, alpha: 0)
         secondFoodCollectionView.backgroundColor = UIColor(white: 1, alpha: 0)
@@ -142,7 +138,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             //Определение, какая ячейка нажата
             let indexPaths = self.firstFoodCollectionView!.indexPathsForSelectedItems
             let indexPath = indexPaths![0] as NSIndexPath
-            //Конец
+            
             let detailVC = segue.destination as! DetailTableViewController
             detailVC.textLabel = (foodInJSON?.firstFood![indexPath.row].Product)!
             detailVC.textImagePath = (foodInJSON?.firstFood![indexPath.row].Detail?.ImagePath!)!

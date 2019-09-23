@@ -20,7 +20,7 @@ class ShowAllFoodCollectionViewController: UICollectionViewController, UICollect
         title = navigationTitle
     }
     
-    // MARK: UICollectionViewDataSource
+    // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayFood.count
     }
@@ -42,11 +42,9 @@ class ShowAllFoodCollectionViewController: UICollectionViewController, UICollect
             //Определение, какая ячейка нажата
             let indexPaths = self.collectionView.indexPathsForSelectedItems
             let indexPath = indexPaths![0] as NSIndexPath
-            //Конец
-            let detailVC = segue.destination as! DetailTableViewController
             
+            let detailVC = segue.destination as! DetailTableViewController
             detailVC.textLabel = (arrayFood[indexPath.row].Product)!
-            //detailVC.aboutLabelText = (foodInJSON?.firstFood![indexPath.row].Detail?.Discription)!
             detailVC.textImagePath = (arrayFood[indexPath.row].Detail?.ImagePath!)!
             detailVC.steps = (arrayFood[indexPath.row].steps ?? [])
             detailVC.ingredients = (arrayFood[indexPath.row].Ingredients ?? "Нет описания")

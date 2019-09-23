@@ -48,7 +48,6 @@ class NormalizeTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return filteredNormalizeFood.count
@@ -66,7 +65,6 @@ class NormalizeTableViewController: UITableViewController {
             food = normalizeFood[indexPath.row]
         }
         
-        //Корректная работа stepper
         if(food.sizeInPvd != "") {
             cell.sizeInPvdLabel.text = "\(Int(food.sizeInPvd!)! * Int(stepperNormalize.value))"
         } else {
