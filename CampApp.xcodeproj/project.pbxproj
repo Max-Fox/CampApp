@@ -228,7 +228,7 @@
 				3FA1012D2330D0B800489141 /* DetailViewController */,
 				3FA1012E2330D19D00489141 /* AllFoodCollectionViewController */,
 				3FA1012F2330D1CB00489141 /* FavoritesViewController */,
-				3FA101302330D29700489141 /* FoodCalculationViewController */,
+				3FA101302330D29700489141 /* NormalizeTableViewController */,
 				3F7B3869228B519F00FEA274 /* CollectionViewCell.swift */,
 				3F7B387C2290810D00FEA274 /* TableViewCell.swift */,
 			);
@@ -262,13 +262,13 @@
 			path = FavoritesViewController;
 			sourceTree = "<group>";
 		};
-		3FA101302330D29700489141 /* FoodCalculationViewController */ = {
+		3FA101302330D29700489141 /* NormalizeTableViewController */ = {
 			isa = PBXGroup;
 			children = (
 				3F6E863C22B14B6C00ECF71A /* NormalizeTableViewController.swift */,
 				3F6E863E22B1649F00ECF71A /* NormalizeTableViewCell.swift */,
 			);
-			path = FoodCalculationViewController;
+			path = NormalizeTableViewController;
 			sourceTree = "<group>";
 		};
 		3FA101322330D41B00489141 /* Data */ = {
