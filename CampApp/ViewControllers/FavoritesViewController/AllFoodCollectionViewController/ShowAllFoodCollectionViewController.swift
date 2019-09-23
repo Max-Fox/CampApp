@@ -38,7 +38,7 @@ class ShowAllFoodCollectionViewController: UICollectionViewController, UICollect
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "detailSegue") {
+        if segue.identifier == "detailSegue" {
             //Определение, какая ячейка нажата
             let indexPaths = self.collectionView.indexPathsForSelectedItems
             let indexPath = indexPaths![0] as NSIndexPath
@@ -68,12 +68,12 @@ extension ShowAllFoodCollectionViewController: DetailTableViewDelegate {
         var indexFood = 0
         var check = 0
         for i in 0..<favoriteFoods.count {
-            if(favoriteFoods[i].foodName == textLabel){
+            if favoriteFoods[i].foodName == textLabel {
                 check = 1
                 indexFood = i
             }
         }
-        if(check == 0){
+        if check == 0 {
             icon.setImage(UIImage(named: "favorite"), for: .normal)
             saveFood(foodName: textLabel, favoriteFood: &favoriteFoods)
             appDelegate?.sheldureNotification(notificationTitle: "Сохранено в CoreData", notificationContent: #"Рецепт "\#(textLabel)" сохранен"#)

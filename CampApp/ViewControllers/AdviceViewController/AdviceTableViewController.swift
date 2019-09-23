@@ -37,7 +37,7 @@ class AdviceTableViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "fullAdviceSegue") {
+        if segue.identifier == "fullAdviceSegue" {
             if let indexPath = self.adviceTableView.indexPathForSelectedRow{
                 let adviceVC = segue.destination as! FullAdviceViewController
                 adviceVC.textTitleLabel = adviceArrayInJSON?.advice?[indexPath.row].title ?? "Нет заголовка"

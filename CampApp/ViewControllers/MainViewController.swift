@@ -31,9 +31,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if(collectionView == firstFoodCollectionView) {
+        if collectionView == firstFoodCollectionView {
             return foodInJSON?.firstFood?.count ?? 0
-        } else if (collectionView == drinkCollectionView) {
+        } else if collectionView == drinkCollectionView {
             return drinkFood?.count ?? 0
         }
         else {
@@ -42,7 +42,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if(collectionView == firstFoodCollectionView) {
+        if collectionView == firstFoodCollectionView {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
             cell.label.text = foodInJSON?.firstFood![indexPath.row].Product
@@ -63,7 +63,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
 
             return cell
             
-        } else if (collectionView == drinkCollectionView) {
+        } else if collectionView == drinkCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
             
             cell.label.text = drinkFood![indexPath.row].Product
@@ -94,7 +94,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if (collectionView != drinkCollectionView) {
+        if collectionView != drinkCollectionView {
             return CGSize(width: 200, height: 200)
         } else {
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
@@ -102,7 +102,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if(collectionView == secondFoodCollectionView){
+        if collectionView == secondFoodCollectionView {
             let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailSB") as! DetailTableViewController
             detailVC.textLabel = foodInJSON?.secondFood![indexPath.row].Product ?? "Без названия"
             detailVC.textImagePath = (foodInJSON?.secondFood![indexPath.row].Detail?.ImagePath!)!
@@ -112,7 +112,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             navigationController?.pushViewController(detailVC, animated: true)
         }
         
-        if(collectionView == drinkCollectionView){
+        if collectionView == drinkCollectionView {
             let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailSB") as! DetailTableViewController
             detailVC.textLabel = drinkFood?[indexPath.row].Product ?? "Нет названия"
             detailVC.textImagePath = drinkFood?[indexPath.row].Detail?.ImagePath ?? "Нет фото"
@@ -134,7 +134,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "detailSegue") {
+        if segue.identifier == "detailSegue" {
             //Определение, какая ячейка нажата
             let indexPaths = self.firstFoodCollectionView!.indexPathsForSelectedItems
             let indexPath = indexPaths![0] as NSIndexPath
@@ -146,7 +146,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             detailVC.ingredients = (foodInJSON?.firstFood![indexPath.row].Ingredients ?? "Нет описания")
             detailVC.delegate = self
         }
-        if (segue.identifier == "ShowAllFirstFoodSegue") {
+        if segue.identifier == "ShowAllFirstFoodSegue" {
             let showAllVC = segue.destination as! ShowAllFoodCollectionViewController
             showAllVC.arrayFood = foodInJSON?.firstFood ?? []
             showAllVC.navigationTitle = navigationTitle.text
@@ -161,7 +161,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if(collectionView == drinkCollectionView){
+        if collectionView == drinkCollectionView {
             pageControlThirdFood.currentPage = indexPath.row
         }
     }
@@ -190,7 +190,7 @@ extension MainViewController: DetailTableViewDelegate {
                 indexFood = i
             }
         }
-        if(check == 0){
+        if check == 0 {
             icon.setImage(UIImage(named: "favorite"), for: .normal)
             saveFood(foodName: textLabel, favoriteFood: &favoriteFoods)
             appDelegate?.sheldureNotification(notificationTitle: "Сохранено в CoreData", notificationContent: #"Рецепт "\#(textLabel)" сохранен"#)

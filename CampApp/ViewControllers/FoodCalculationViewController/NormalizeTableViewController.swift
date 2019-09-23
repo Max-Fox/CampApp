@@ -59,13 +59,13 @@ class NormalizeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NormalizeTableViewCell
         
         var food: NormalizeFood
-        if isFiltering{
+        if isFiltering {
             food = filteredNormalizeFood[indexPath.row]
         } else {
             food = normalizeFood[indexPath.row]
         }
         
-        if(food.sizeInPvd != "") {
+        if food.sizeInPvd != "" {
             cell.sizeInPvdLabel.text = "\(Int(food.sizeInPvd!)! * Int(stepperNormalize.value))"
         } else {
             cell.sizeInPvdLabel.text = food.sizeInPvd
@@ -74,7 +74,7 @@ class NormalizeTableViewController: UITableViewController {
         cell.TitleNormalizeLabel?.text = food.name
         cell.TitleNormalizeLabel.adjustsFontSizeToFitWidth = true
         
-        if(food.sizeInSummer != "") {
+        if food.sizeInSummer != "" {
             cell.sizeInSummerLabel.text = "\(Int(food.sizeInSummer!)! * Int(stepperNormalize.value))"
         } else {
             cell.sizeInSummerLabel.text = food.sizeInSummer
@@ -82,7 +82,7 @@ class NormalizeTableViewController: UITableViewController {
         
         cell.sizeInSummerLabel.adjustsFontSizeToFitWidth = true
         
-        if(food.sizeInWinter != "") {
+        if food.sizeInWinter != "" {
             cell.sizeInWinterLabel.text = "\(Int(food.sizeInWinter!)! * Int(stepperNormalize.value))"
         } else {
             cell.sizeInWinterLabel.text = food.sizeInWinter

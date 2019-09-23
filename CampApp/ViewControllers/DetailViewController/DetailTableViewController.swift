@@ -43,12 +43,12 @@ class DetailTableViewController: UITableViewController {
         var check = 0
         
         for food in favoriteFood {
-            if (food.foodName == textLabel){
+            if food.foodName == textLabel {
                 check = 1
             }
         }
         
-        if(check == 0){
+        if check == 0 {
             favoriteIcon.setImage(UIImage(named: "notfavorite"), for: .normal)
         } else {
             favoriteIcon.setImage(UIImage(named: "favorite"), for: .normal)
@@ -62,22 +62,19 @@ class DetailTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
         //Красим цвет текста, в зависимости от выполнения
         if doneStep[indexPath.row] == true {
             cell.textLabel?.textColor = .green
         } else {
             cell.textLabel?.textColor = .black
         }
-        
         cell.textLabel?.text = "Шаг \(steps[indexPath.row].numStep ?? 0): \(steps[indexPath.row].aboutStep ?? "Конец")"
-        
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(tableView.cellForRow(at: indexPath)?.textLabel?.textColor == .black){
+        if tableView.cellForRow(at: indexPath)?.textLabel?.textColor == .black {
             tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .green
             doneStep[indexPath.row] = true
         } else {

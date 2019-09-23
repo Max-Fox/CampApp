@@ -17,7 +17,7 @@ class TableViewParalax: UITableView {
         super.layoutSubviews()
         
         guard let header = tableHeaderView else { return }
-        if let imageView = header.subviews.first as? UIImageView{
+        if let imageView = header.subviews.first as? UIImageView {
             height = imageView.constraints.filter{ $0.identifier == "height" }.first
             bottom = header.constraints.filter{ $0.identifier == "bottom" }.first
         }
