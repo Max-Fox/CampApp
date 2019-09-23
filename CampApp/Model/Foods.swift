@@ -8,6 +8,9 @@
 
 import Foundation
 
+/// - firstFood: первые блюда (берутся из JSON)
+/// - secondFood: вторые блюда (беруться из JSON)
+
 struct Foods: Decodable {
     var firstFood: [Food]?
     var secondFood: [Food]?

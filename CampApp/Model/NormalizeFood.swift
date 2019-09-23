@@ -8,6 +8,9 @@
 
 import Foundation
 
+/// - sizeInPvd: норма еды в походе выходного дня
+/// - sizeInSummer: норма еды в летнем походе
+/// - sizeInPvd: норма еды в зимнем походе
 struct NormalizeFood {
     var name: String?
     var sizeInPvd: String?
