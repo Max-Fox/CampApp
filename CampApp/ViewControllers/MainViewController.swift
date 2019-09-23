@@ -47,15 +47,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
             cell.label.text = foodInJSON?.firstFood![indexPath.row].Product
             
-            //Проверка на наличие ImagePath в JSON
-            if (foodInJSON?.firstFood != nil) {
-                if (foodInJSON?.firstFood![indexPath.row] != nil) {
-                    if (foodInJSON?.firstFood![indexPath.row].Detail != nil) {
-                        if (foodInJSON?.firstFood![indexPath.row].Detail!.ImagePath != nil) {
-                            cell.image.image = UIImage(named: (foodInJSON?.firstFood![indexPath.row].Detail!.ImagePath)!)
-                        }
-                    }
-                }
+
+            if ((foodInJSON?.firstFood?[indexPath.row].Detail?.ImagePath) != nil) {
+                cell.image.image = UIImage(named: (foodInJSON?.secondFood![indexPath.row].Detail!.ImagePath)!)
             }
             
             
@@ -75,16 +69,8 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
             cell.label.text = foodInJSON?.secondFood![indexPath.row].Product
             
-            
-            //Проверка на наличие ImagePath в JSON
-            if (foodInJSON?.secondFood != nil) {
-                if (foodInJSON?.secondFood![indexPath.row] != nil) {
-                    if (foodInJSON?.secondFood![indexPath.row].Detail != nil) {
-                        if (foodInJSON?.secondFood![indexPath.row].Detail!.ImagePath != nil) {
-                            cell.image.image = UIImage(named: (foodInJSON?.secondFood![indexPath.row].Detail!.ImagePath)!)
-                        }
-                    }
-                }
+            if ((foodInJSON?.secondFood?[indexPath.row].Detail?.ImagePath) != nil) {
+                cell.image.image = UIImage(named: (foodInJSON?.secondFood![indexPath.row].Detail!.ImagePath)!)
             }
             
             cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
