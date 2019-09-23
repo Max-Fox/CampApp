@@ -11,11 +11,11 @@ import UIKit
 
 
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    @IBOutlet weak var collection1: UICollectionView!
+    @IBOutlet weak var firstFoodCollectionView: UICollectionView!
     @IBOutlet weak var secondFoodCollectionView: UICollectionView!
     @IBOutlet weak var navigationTitle: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var thirdCV: UICollectionView!
+    @IBOutlet weak var drinkCollectionView: UICollectionView!
     @IBOutlet weak var pageControlThirdFood: UIPageControl!
     
     var foodInJSON: Foods?
@@ -36,9 +36,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if(collectionView == collection1) {
+        if(collectionView == firstFoodCollectionView) {
             return foodInJSON?.firstFood?.count ?? 0
-        } else if (collectionView == thirdCV) {
+        } else if (collectionView == drinkCollectionView) {
             return drinkFood?.count ?? 0
         }
         else {
@@ -47,7 +47,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if(collectionView == collection1) {
+        if(collectionView == firstFoodCollectionView) {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
             cell.label.text = foodInJSON?.firstFood![indexPath.row].Product
@@ -68,7 +68,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
 
             return cell
             
-        } else if (collectionView == thirdCV) {
+        } else if (collectionView == drinkCollectionView) {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
             
             cell.label.text = drinkFood![indexPath.row].Product
@@ -99,7 +99,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if (collectionView != thirdCV) {
+        if (collectionView != drinkCollectionView) {
             return CGSize(width: 200, height: 200)
         } else {
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
@@ -117,7 +117,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             navigationController?.pushViewController(detailVC, animated: true)
         }
         
-        if(collectionView == thirdCV){
+        if(collectionView == drinkCollectionView){
             let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailSB") as! DetailTableViewController
             detailVC.textLabel = drinkFood?[indexPath.row].Product ?? "Нет названия"
             detailVC.textImagePath = drinkFood?[indexPath.row].Detail?.ImagePath ?? "Нет фото"
@@ -129,20 +129,20 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func setupCollectionsView(){
-        collection1.showsHorizontalScrollIndicator = false
+        firstFoodCollectionView.showsHorizontalScrollIndicator = false
         secondFoodCollectionView.showsHorizontalScrollIndicator = false
         
         //Прозрачный фон
-        collection1.backgroundColor = UIColor(white: 1, alpha: 0)
+        firstFoodCollectionView.backgroundColor = UIColor(white: 1, alpha: 0)
         secondFoodCollectionView.backgroundColor = UIColor(white: 1, alpha: 0)
-        thirdCV.backgroundColor = UIColor(white: 1, alpha: 0)
-        thirdCV.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
+        drinkCollectionView.backgroundColor = UIColor(white: 1, alpha: 0)
+        drinkCollectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "detailSegue") {
             //Определение, какая ячейка нажата
-            let indexPaths = self.collection1!.indexPathsForSelectedItems
+            let indexPaths = self.firstFoodCollectionView!.indexPathsForSelectedItems
             let indexPath = indexPaths![0] as NSIndexPath
             //Конец
             let detailVC = segue.destination as! DetailTableViewController
@@ -170,13 +170,13 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if(collectionView == thirdCV){
+        if(collectionView == drinkCollectionView){
             pageControlThirdFood.currentPage = indexPath.row
         }
     }
     
     @IBAction func changeValue(_ sender: UIPageControl) {
-        thirdCV.scrollToItem(at: NSIndexPath(row: sender.currentPage, section: 0) as IndexPath, at: .right, animated: true)
+        drinkCollectionView.scrollToItem(at: NSIndexPath(row: sender.currentPage, section: 0) as IndexPath, at: .right, animated: true)
     }
 }
 
